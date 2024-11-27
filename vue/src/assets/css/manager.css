@@ -1,0 +1,107 @@
+.manager-header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.manager-header-left div {
+    padding: 0 35px;
+    font-size: 30px;
+    font-family: 仿宋, serif;
+}
+
+.manager-header-center {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*element-ui css*/
+.el-header, .el-footer {
+    background: #2e324c;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+}
+
+.el-aside {
+    text-align: center;
+    line-height: 200px;
+}
+
+.el-main {
+    background-color: #f8f8ff;
+    color: #333;
+    text-align: center;
+}
+
+body > .el-container {
+    margin-bottom: 40px;
+
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+    line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+    line-height: 320px;
+}
+
+.el-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+}
+
+.el-icon-arrow-down {
+    font-size: 12px;
+}
+
+.el-dropdown div {
+    display: flex;
+    align-items: center;
+}
+
+.manager-header-center span {
+    color: white !important;
+}
+
+/*侧边栏*/
+.el-menu {
+    height: 100%;
+    background-color: #232a40;
+    text-align: left;
+    font-size: 15px !important;
+}
+
+.el-menu-item {
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: #222b40 !important; /* 必须加上这个背景色，否则鼠标离开会出现白色 */
+}
+
+.el-icon-menu {
+    font-size: 15px !important;
+    color: #ffffff !important;
+}
+
+.el-icon-s-home {
+    width: 16px !important;
+}
+
+.el-submenu__title:hover {
+    background-color: #222 !important;
+}
+
+.el-menu-item:hover {
+    background-color: #222 !important;
+}
