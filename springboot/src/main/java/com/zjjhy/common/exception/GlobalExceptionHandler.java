@@ -1,7 +1,7 @@
-package com.zjjhy.exception;
+package com.zjjhy.common.exception;
 
-import com.zjjhy.common.Result;
 import com.zjjhy.common.enums.ResultCodeEnum;
+import com.zjjhy.pojo.vo.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -12,19 +12,21 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(SystemException.class)
     public Result doSystemException(SystemException se) {
-        log.info("系统异常:{}", se.getMsg());
-        return Result.error(se.getCode(), se.getMsg());
+        //没必要 调用 getCause 异常原因就只有当前这个异常，没有其他异常原因
+        log.info("系统异常:code={},msg={}", se.getCode(), se.getMessage());
+        return Result.error(se.getCode(), se.getMessage());
     }
 
     @ExceptionHandler(BusinessException.class)
     public Result doBusinessException(BusinessException be) {
-        log.info("业务异常:{}", be.getMsg());
-        return Result.error(be.getCode(), be.getMsg());
+        log.info("业务异常:code={},msg={}", be.getCode(), be.getMessage());
+        return Result.error(be.getCode(), be.getMessage());
     }
 
     @ExceptionHandler(Exception.class)
     public Result doException(Exception ex) {
-        log.info("异常:", ex);
+        // getCause 方法是 Throwable 类中的一个方法，用于获取当前异常的原因
+        log.info("异常:msg={}", ex.getMessage(), ex.getCause());
         return Result.error(ResultCodeEnum.SYSTEM_ERROR);
     }
 }

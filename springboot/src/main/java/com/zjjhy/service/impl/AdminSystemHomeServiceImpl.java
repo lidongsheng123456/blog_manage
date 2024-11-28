@@ -1,5 +1,7 @@
 package com.zjjhy.service.impl;
 
+import com.zjjhy.common.annotation.AutoFill;
+import com.zjjhy.common.enums.OperationTypeEnum;
 import com.zjjhy.mapper.AdminSystemHomeMapper;
 import com.zjjhy.pojo.dto.DocsDto;
 import com.zjjhy.pojo.entity.Docs;
@@ -10,7 +12,6 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -27,18 +28,17 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
         return pageVo;
     }
 
+    @AutoFill(OperationTypeEnum.INSERT)
     @Override
     public int addDocs(DocsDto dto) {
         Docs docs = new Docs();
         BeanUtils.copyProperties(dto, docs);
-        docs.setCreateTime(LocalDateTime.now());
-        docs.setUpdateTime(LocalDateTime.now());
         return adminSystemHomeMapper.addDocs(docs);
     }
 
+    @AutoFill(OperationTypeEnum.UPDATE)
     @Override
     public int updateDocs(DocsDto dto) {
-        dto.setUpdateTime(LocalDateTime.now());
         return adminSystemHomeMapper.updateDocs(dto);
     }
 

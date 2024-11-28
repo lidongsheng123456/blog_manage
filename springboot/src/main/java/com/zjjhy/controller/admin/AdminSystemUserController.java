@@ -1,7 +1,7 @@
 package com.zjjhy.controller.admin;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.Result;
+import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.common.annotation.Log;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.pojo.dto.PwdDto;
@@ -114,7 +114,6 @@ public class AdminSystemUserController {
      *
      * @return
      */
-    @Log
     @GetMapping("/PersonPwd")
     public Result getPersonPwd(@RequestParam("id") Integer id) {
         log.info("后台用户获取密码：{}", id);

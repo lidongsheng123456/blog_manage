@@ -1,7 +1,8 @@
 package com.zjjhy.controller.admin;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.Result;
+import com.zjjhy.common.exception.SystemException;
+import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.common.annotation.Log;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.pojo.dto.DocsDto;

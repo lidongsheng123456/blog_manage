@@ -4,7 +4,7 @@ import cn.hutool.core.util.ObjectUtil;
 import com.zjjhy.common.Constants;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.enums.RoleEnum;
-import com.zjjhy.exception.BusinessException;
+import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.mapper.LoginMapper;
 import com.zjjhy.pojo.dto.UserDto;
 import com.zjjhy.pojo.entity.User;

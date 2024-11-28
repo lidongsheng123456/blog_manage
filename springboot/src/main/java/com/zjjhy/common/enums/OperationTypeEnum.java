@@ -1,6 +1,6 @@
 package com.zjjhy.common.enums;
 
-public enum OperationType {
+public enum OperationTypeEnum {
     /**
      * 更新
      */

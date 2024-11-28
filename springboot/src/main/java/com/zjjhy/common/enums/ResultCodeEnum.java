@@ -20,7 +20,6 @@ public enum ResultCodeEnum {
     LOG_ERROR("5009", "服务器记录日志异常，请联系管理员"),
     ;
 
-
     public final String code;
     public final String msg;
 

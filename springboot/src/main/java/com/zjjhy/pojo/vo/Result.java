@@ -1,4 +1,4 @@
-package com.zjjhy.common;
+package com.zjjhy.pojo.vo;
 
 import com.zjjhy.common.enums.ResultCodeEnum;
 

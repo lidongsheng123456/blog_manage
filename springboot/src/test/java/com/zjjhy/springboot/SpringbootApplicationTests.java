@@ -1,25 +1,29 @@
 package com.zjjhy.springboot;
 
 import com.zjjhy.mapper.AdminSystemHomeMapper;
-import com.zjjhy.pojo.entity.Docs;
-import com.zjjhy.pojo.vo.DocsVo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-@SpringBootTest
+//@SpringBootTest
 class SpringbootApplicationTests {
-    @Autowired
-    AdminSystemHomeMapper adminSystemUserMapper;
+//    @Autowired
+//    AdminSystemHomeMapper adminSystemUserMapper;
+
 
     @Test
     void contextLoads() {
-        Integer i = 10;
-        System.out.println(i + "dd");
+        ThreadLocal<String> threadLocal = new ThreadLocal<>();
+        threadLocal.set("LiDong");
+        new Thread(()->{
+//            threadLocal.set("Bob");
+            System.out.println("Bob--->" + threadLocal.get());
+        }).start();
+        new Thread(()->{
+//            threadLocal.set("Job");
+            System.out.println("Job--->" + threadLocal.get());
+        }).start();
+        System.out.println("LiDong--->" + threadLocal.get());
     }
 
 }

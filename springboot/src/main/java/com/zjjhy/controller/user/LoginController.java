@@ -1,8 +1,7 @@
 package com.zjjhy.controller.user;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.Result;
-import com.zjjhy.common.annotation.Log;
+import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.pojo.dto.UserDto;
 import com.zjjhy.service.LoginService;
@@ -20,7 +19,6 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
-    @Log
     @PostMapping("/login")
     public Result login(@RequestBody UserDto userDto) {
         if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {
@@ -30,7 +28,6 @@ public class LoginController {
         return Result.success(loginService.login(userDto));
     }
 
-    @Log
     @PostMapping("/register")
     public Result register(@RequestBody UserDto userDto) {
         if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {

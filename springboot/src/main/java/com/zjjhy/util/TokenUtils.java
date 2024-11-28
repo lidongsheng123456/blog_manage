@@ -6,9 +6,10 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.zjjhy.common.context.BaseContext;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.enums.RoleEnum;
-import com.zjjhy.exception.BusinessException;
+import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.pojo.entity.User;
 import com.zjjhy.service.LoginService;
 import jakarta.annotation.PostConstruct;
@@ -63,6 +64,7 @@ public class TokenUtils {
             String userRole = JWT.decode(token).getAudience().get(0);
             String userId = userRole.split("-")[0];  // 获取用户id --> 1
             log.info("当前用户id：{}", userId);
+            BaseContext.setCurrentId(Long.parseLong(userId));
             String role = userRole.split("-")[1];    // 获取角色 --> 管理员
 
             //token的载荷默认是管理员

@@ -1,12 +1,12 @@
 package com.zjjhy.common.aspect;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.alibaba.fastjson.JSONObject;
-import com.auth0.jwt.JWT;
+import com.zjjhy.common.context.BaseContext;
 import com.zjjhy.common.enums.ResultCodeEnum;
-import com.zjjhy.exception.BusinessException;
+import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.mapper.OperateLogMapper;
 import com.zjjhy.pojo.entity.OperateLog;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -14,8 +14,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.mybatis.spring.MyBatisSystemException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
@@ -42,36 +40,37 @@ public class LogAspect {
      */
     @Around("@annotation(com.zjjhy.common.annotation.Log)")
     public Object recordLog(ProceedingJoinPoint joinPoint) throws Throwable {
-        /**
-         * @Autowired 注入 HttpServletRequest：在大多数情况下可以工作，但在多线程环境或某些特定的 AOP 切面中可能无法获取到当前请求的上下文。
-         * 使用 RequestContextHolder：这是一种更安全的方法，确保在任何情况下都能获取到当前请求的 HttpServletRequest。
-         */
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes != null ? attributes.getRequest() : null;
+        //每次请求拦截器都会验证jwt令牌，并把令牌中的用户id，也就是创建jwt时使用的载荷（id）拿出来放到本地线程变量副本中，因此不用担心id是否是全局的唯一的,因为每次请求都会重新获取用户id
+        String userId = String.valueOf(BaseContext.getCurrent());
 
-        String token = null;
-        if (request != null) {
-            token = request.getHeader("token");
+        if (ObjectUtil.isEmpty(userId)) {
+            throw new BusinessException(ResultCodeEnum.TOKEN_CHECK_ERROR);
         }
-        //获取token令牌并破译其中的载荷并用-切割拿到第一个参数id第二个参数是用户角色
-        String userId = JWT.decode(token).getAudience().get(0).split("-")[0];
         //记录方法执行前的年月日时分秒
         LocalDateTime operateTime = LocalDateTime.now();
+
         //获取操作类名
         String className = joinPoint.getTarget().getClass().getName();
+
         //获取操作方法名
         String methodName = joinPoint.getSignature().getName();
+
         //操作方法参数
         Object[] args = joinPoint.getArgs();
         String methodParams = Arrays.toString(args);
+
         //记录方法开始前的时间戳
         Long begin = System.currentTimeMillis();
+
         //开始执行切入点方法并拿到切入点方法的返回值
         Object resultValue = joinPoint.proceed();
+
         //记录方法开始后的时间戳
         Long end = System.currentTimeMillis();
+
         //记录方法返回值
         String returnValue = JSONObject.toJSONString(resultValue);
+
         //记录方法执行总耗时
         Long costTime = end - begin;
 
