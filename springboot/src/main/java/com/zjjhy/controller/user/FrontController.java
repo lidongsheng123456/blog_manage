@@ -1,7 +1,7 @@
 package com.zjjhy.controller.user;
 
-import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.pojo.dto.DocsDto;
+import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.service.FrontService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

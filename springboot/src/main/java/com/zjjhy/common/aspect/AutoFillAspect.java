@@ -50,6 +50,7 @@ public class AutoFillAspect {
 
         //获取对象数组的第一个参数对象
         Object pojo = args[0];
+
         log.info("args:{}", args);
 
         //准备赋值的数据

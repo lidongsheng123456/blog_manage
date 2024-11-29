@@ -1,7 +1,6 @@
 package com.zjjhy.controller.admin;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.common.annotation.Log;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.pojo.dto.PwdDto;
@@ -9,6 +8,7 @@ import com.zjjhy.pojo.dto.UserDto;
 import com.zjjhy.pojo.entity.User;
 import com.zjjhy.pojo.vo.PageVo;
 import com.zjjhy.pojo.vo.PwdVo;
+import com.zjjhy.pojo.vo.Result;
 import com.zjjhy.pojo.vo.UserVo;
 import com.zjjhy.service.AdminSystemUserService;
 import lombok.extern.slf4j.Slf4j;

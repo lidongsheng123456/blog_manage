@@ -60,7 +60,7 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
     @Override
     public List<DocsVo> validateDocs(DocsDto docsDto) {
         Docs docs = new Docs();
-        BeanUtils.copyProperties(docsDto,docs);
+        BeanUtils.copyProperties(docsDto, docs);
         return adminSystemHomeMapper.docsDto(docs);
     }
 }

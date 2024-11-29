@@ -20,16 +20,16 @@ import java.nio.charset.StandardCharsets;
 @RestController
 @RequestMapping("/files")
 public class FileController {
-
     //文件上传存储路径
+    //System.getProperty("user.dir") //当前用户的工作目录:  D:\develop\idea_project\my_blog
     private static final String filePath = System.getProperty("user.dir") + "/files/"; //D:\develop\idea_project\my_blog/files/
 
     //注入yml配置文件中的配置
-    @Value("${server.port:8088}")
+    @Value("${server.port}")
     private String port; //8088
 
     //注入yml配置文件中的配置
-    @Value("${ip:localhost}")
+    @Value("${server.host}")
     private String ip; //localhost
 
     /**
@@ -43,7 +43,7 @@ public class FileController {
         //1.文件名后缀
         String flag; //1732069777447
 
-        //2.同步代码块;避免其他线程操作干扰创建文件名后缀
+        //2.同步代码块用当前类的字节码文件当做锁对象;避免其他线程操作干扰创建文件名后缀
         synchronized (FileController.class) {
             flag = System.currentTimeMillis() + "";
             //当前线程暂停1ms确保每次文件名后缀不一样

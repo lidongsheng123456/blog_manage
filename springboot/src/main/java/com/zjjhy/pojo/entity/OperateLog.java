@@ -32,6 +32,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return id
      */
     public Long getId() {
@@ -40,6 +41,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param id
      */
     public void setId(Long id) {
@@ -48,6 +50,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return operateUserId
      */
     public String getOperateUserId() {
@@ -56,6 +59,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param operateUserId
      */
     public void setOperateUserId(String operateUserId) {
@@ -64,6 +68,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return operateTime
      */
     public LocalDateTime getOperateTime() {
@@ -72,6 +77,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param operateTime
      */
     public void setOperateTime(LocalDateTime operateTime) {
@@ -80,6 +86,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return className
      */
     public String getClassName() {
@@ -88,6 +95,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param className
      */
     public void setClassName(String className) {
@@ -96,6 +104,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return methodName
      */
     public String getMethodName() {
@@ -104,6 +113,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param methodName
      */
     public void setMethodName(String methodName) {
@@ -112,6 +122,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return methodParams
      */
     public String getMethodParams() {
@@ -120,6 +131,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param methodParams
      */
     public void setMethodParams(String methodParams) {
@@ -128,6 +140,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return returnValue
      */
     public String getReturnValue() {
@@ -136,6 +149,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param returnValue
      */
     public void setReturnValue(String returnValue) {
@@ -144,6 +158,7 @@ public class OperateLog {
 
     /**
      * 获取
+     *
      * @return costTime
      */
     public Long getCostTime() {
@@ -152,6 +167,7 @@ public class OperateLog {
 
     /**
      * 设置
+     *
      * @param costTime
      */
     public void setCostTime(Long costTime) {
@@ -159,6 +175,6 @@ public class OperateLog {
     }
 
     public String toString() {
-        return "OperateLog{id = " + id + ", operateUserId = " + operateUserId + ", operateTime = " + operateTime + ", className = " + className + ", methodName = " + methodName + ", methodParams = " + methodParams + ", returnValue = " + returnValue + ", costTime = " + costTime + "}" ;
+        return "OperateLog{id = " + id + ", operateUserId = " + operateUserId + ", operateTime = " + operateTime + ", className = " + className + ", methodName = " + methodName + ", methodParams = " + methodParams + ", returnValue = " + returnValue + ", costTime = " + costTime + "}";
     }
 }

@@ -1,15 +1,15 @@
 package com.zjjhy.service.impl;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.Constants;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.enums.RoleEnum;
 import com.zjjhy.common.exception.BusinessException;
+import com.zjjhy.common.interface_constants.Constants;
+import com.zjjhy.common.util.TokenUtils;
 import com.zjjhy.mapper.LoginMapper;
 import com.zjjhy.pojo.dto.UserDto;
 import com.zjjhy.pojo.entity.User;
 import com.zjjhy.service.LoginService;
-import com.zjjhy.util.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

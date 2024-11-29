@@ -1,7 +1,6 @@
 package com.zjjhy.service.impl;
 
-import com.zjjhy.common.Constants;
-import com.zjjhy.common.annotation.Log;
+import com.zjjhy.common.interface_constants.Constants;
 import com.zjjhy.mapper.AdminSystemUserMapper;
 import com.zjjhy.pojo.dto.PwdDto;
 import com.zjjhy.pojo.dto.UserDto;
@@ -39,6 +38,7 @@ public class AdminSystemUserServiceImpl implements AdminSystemUserService {
 
     @Override
     public int deleteUser(List<Integer> ids) {
+
         return adminSystemUserMapper.deleteUser(ids);
     }
 

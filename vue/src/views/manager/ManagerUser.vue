@@ -133,6 +133,7 @@
 
 <script>
 import {addUser, deleteUser, queryUserData, updateUser, validateUser} from "@/api/display/UserDisplay";
+import axios from "axios";
 
 export default {
   data() {
@@ -159,8 +160,8 @@ export default {
       user: [],
       //标题条件查询用户
       queryUserName: null,
-      //复选框id
-      ids: [],
+      //删除复选框表单
+      deleteForm: [],
       //对话框显示隐藏
       dialogFormVisible: false,
       //新增对话框与修改对话框表单
@@ -236,7 +237,7 @@ export default {
     },
     //控制复选框
     handleSelectionChange(rows) {
-      this.ids = rows.map(e => e.id)
+      this.deleteForm = rows
     },
     //添加用户
     addUser() {
@@ -246,11 +247,20 @@ export default {
     },
     //批量删除用户或删除单个用户
     deleteUser() {
-      if (this.ids.length === 0) {
+      if (this.deleteForm.length === 0) {
         return this.$message.error('请选择您要删除的数据')
       }
       this.$confirm('您确定要删除吗？', '确定删除', {type: 'warning'}).then(() => {
-        deleteUser(this.ids).then(res => {
+        let ids = this.deleteForm.map(e => e.id)
+        let imgUrl = this.deleteForm.map(e => e.imgUrl);
+        //删除图片
+        for (let i = 0; i < imgUrl.length; i++) {
+          axios.delete(imgUrl[i]).catch(error => {
+            console.log(error)
+          })
+        }
+        //删除用户数据
+        deleteUser(ids).then(res => {
           if (res.code === '200') {
             this.$message.success('删除成功')
             this.initialize()

@@ -1,4 +1,4 @@
-package com.zjjhy.util;
+package com.zjjhy.common.util;
 
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.ObjectUtil;
@@ -35,14 +35,6 @@ public class TokenUtils {
     // 通过资源注入获取登录服务的实例
     @Resource
     private LoginService loginService;
-
-    // @PostConstruct 注解用于标记一个方法，该方法在所有依赖注入完成后、
-    // 但在该 bean 被任何其他 bean 使用之前执行。这个注解通常用于执行一些初始化操作。
-    // 确保loginService被依赖注入完成之后再进行初始化staticLoginService
-    @PostConstruct
-    public void setUserService() {
-        staticLoginService = loginService;
-    }
 
     /**
      * 生成token
@@ -92,6 +84,14 @@ public class TokenUtils {
         }
 
         return true;
+    }
+
+    // @PostConstruct 注解用于标记一个方法，该方法在所有依赖注入完成后、
+    // 但在该 bean 被任何其他 bean 使用之前执行。这个注解通常用于执行一些初始化操作。
+    // 确保loginService被依赖注入完成之后再进行初始化staticLoginService
+    @PostConstruct
+    public void setUserService() {
+        staticLoginService = loginService;
     }
 }
 
