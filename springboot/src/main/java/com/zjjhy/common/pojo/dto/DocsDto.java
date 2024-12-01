@@ -1,10 +1,10 @@
-package com.zjjhy.pojo.entity;
+package com.zjjhy.common.pojo.dto;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-public class Docs {
+public class DocsDto {
     private Integer id;
     private Integer accountId;
     private String docsTitle;
@@ -14,10 +14,10 @@ public class Docs {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
-    public Docs() {
+    public DocsDto() {
     }
 
-    public Docs(Integer id, Integer accountId, String docsTitle, String docsContent, LocalDateTime createTime, LocalDateTime updateTime) {
+    public DocsDto(Integer id, Integer accountId, String docsTitle, String docsContent, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.accountId = accountId;
         this.docsTitle = docsTitle;
@@ -135,6 +135,6 @@ public class Docs {
     }
 
     public String toString() {
-        return "Docs{id = " + id + ", accountId = " + accountId + ", docsTitle = " + docsTitle + ", docsContent = " + docsContent + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
+        return "DocsDto{id = " + id + ", accountId = " + accountId + ", docsTitle = " + docsTitle + ", docsContent = " + docsContent + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
     }
 }

@@ -1,4 +1,4 @@
-package com.zjjhy.pojo.vo;
+package com.zjjhy.common.pojo.vo;
 
 public class PwdVo {
     private String pwd;

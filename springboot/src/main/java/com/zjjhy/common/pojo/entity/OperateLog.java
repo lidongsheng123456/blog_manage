@@ -1,4 +1,4 @@
-package com.zjjhy.pojo.entity;
+package com.zjjhy.common.pojo.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 

@@ -1,9 +1,8 @@
 package com.zjjhy.controller.user;
 
-import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.enums.ResultCodeEnum;
-import com.zjjhy.pojo.dto.UserDto;
-import com.zjjhy.pojo.vo.Result;
+import com.zjjhy.common.pojo.dto.UserDto;
+import com.zjjhy.common.pojo.entity.User;
+import com.zjjhy.common.pojo.vo.Result;
 import com.zjjhy.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,26 +18,29 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
 
+    /**
+     * 登录
+     *
+     * @param userDto
+     * @return
+     */
     @PostMapping("/login")
     public Result login(@RequestBody UserDto userDto) {
-        if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {
-            return Result.error(ResultCodeEnum.PARAM_LOST_ERROR);
-        }
-
-        return Result.success(loginService.login(userDto));
+        log.info("用户登录：{}", userDto);
+        User user = loginService.login(userDto);
+        return Result.success(user);
     }
 
+    /**
+     * 注册
+     *
+     * @param userDto
+     * @return
+     */
     @PostMapping("/register")
     public Result register(@RequestBody UserDto userDto) {
-        if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {
-            return Result.error(ResultCodeEnum.PARAM_LOST_ERROR);
-        }
-
-        int i = loginService.register(userDto);
-        if (i > 0) {
-            return Result.success();
-        }
-
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
+        log.info("用户注册：{}", userDto);
+        loginService.register(userDto);
+        return Result.success();
     }
 }

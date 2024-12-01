@@ -1,19 +1,19 @@
 package com.zjjhy.service.impl;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.zjjhy.common.annotation.AutoFill;
+import com.zjjhy.common.enums.OperationTypeEnum;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.enums.RoleEnum;
 import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.common.interface_constants.Constants;
 import com.zjjhy.common.util.TokenUtils;
 import com.zjjhy.mapper.LoginMapper;
-import com.zjjhy.pojo.dto.UserDto;
-import com.zjjhy.pojo.entity.User;
+import com.zjjhy.common.pojo.dto.UserDto;
+import com.zjjhy.common.pojo.entity.User;
 import com.zjjhy.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.LocalDateTime;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -28,7 +28,12 @@ public class LoginServiceImpl implements LoginService {
      */
     @Override
     public User login(UserDto userDto) {
+        if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {
+            throw new BusinessException(ResultCodeEnum.PARAM_LOST_ERROR);
+        }
+
         User user = loginMapper.selectByUsername(userDto.getUsername());
+
         //空返回true isEmpty会检查String list array 的长度是否为0 其他对象则检查是否为null
         if (ObjectUtil.isEmpty(user)) {
             throw new BusinessException(ResultCodeEnum.USER_NOT_EXIST_ERROR);
@@ -52,8 +57,13 @@ public class LoginServiceImpl implements LoginService {
      * @param userDto
      * @return
      */
+    @AutoFill(OperationTypeEnum.INSERT)//公共字段自动赋值
     @Override
-    public int register(UserDto userDto) {
+    public void register(UserDto userDto) {
+        if (ObjectUtil.isEmpty(userDto.getUsername()) || ObjectUtil.isEmpty(userDto.getPwd())) {
+            throw new BusinessException(ResultCodeEnum.PARAM_LOST_ERROR);
+        }
+
         //1. 注册判断数据库是否存在当前用户名的数据
         User user = loginMapper.selectByUsername(userDto.getUsername());
         //2. 用户不为空则代表当前用户名重复，不能注册，抛出异常
@@ -70,9 +80,10 @@ public class LoginServiceImpl implements LoginService {
         }
 
         userDto.setRole(RoleEnum.ADMIN.getRole());
-        userDto.setCreateTime(LocalDateTime.now());
-        userDto.setUpdateTime(LocalDateTime.now());
-        return loginMapper.register(userDto);
+        int i = loginMapper.register(userDto);
+        if (i == 0) {
+            throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
+        }
     }
 
     /**

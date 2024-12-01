@@ -1,4 +1,4 @@
-package com.zjjhy.pojo.vo;
+package com.zjjhy.common.pojo.vo;
 
 import com.zjjhy.common.enums.ResultCodeEnum;
 
@@ -15,11 +15,17 @@ public class Result {
         this.data = data;
     }
 
+    public Result(String code, String msg, Object data) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
+
     public static Result success() {
-        Result tResult = new Result();
-        tResult.setCode(ResultCodeEnum.SUCCESS.code);
-        tResult.setMsg(ResultCodeEnum.SUCCESS.code);
-        return tResult;
+//        Result tResult = new Result();
+//        tResult.setCode(ResultCodeEnum.SUCCESS.code);
+//        tResult.setMsg(ResultCodeEnum.SUCCESS.code);
+        return new Result("200","success",null);
     }
 
     public static Result success(Object data) {

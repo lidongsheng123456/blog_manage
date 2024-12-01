@@ -4,11 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.zjjhy.mapper.AdminSystemUserMapper">
+    <!--定义复用的查询用户总数sql-->
     <sql id="queryDocsTotal">
         select count(*)
         from blog_account
     </sql>
 
+    <!--定义复用的更新用户sql-->
     <sql id="updateUserByIf">
         <trim prefix="set " suffixOverrides=",">
             <if test="username != null">username=#{username},</if>
@@ -23,39 +25,7 @@
         </trim>
     </sql>
 
-    <select id="queryUserTotal" resultType="java.lang.Integer">
-        <include refid="queryDocsTotal"/>
-        <trim prefix="where " prefixOverrides="and">
-            <if test="id != null">and id != #{id}</if>
-            <if test="username != null">and username like concat('%',#{username},'%')</if>
-            <if test="pwd != null">and pwd = #{pwd}</if>
-            <if test="name != null">and name like concat('%',#{name},'%')}</if>
-            <if test="imgUrl != null">and img_url = #{imgUrl}</if>
-            <if test="role != null">and role = #{role}</if>
-            <if test="phone != null">and phone = #{phone}</if>
-            <if test="email != null">and email = #{email}</if>
-            <if test="createTime != null">and create_time = #{createTime}</if>
-            <if test="updateTime != null">and update_time = #{updateTime}</if>
-        </trim>
-    </select>
-
-    <select id="queryUserData" resultType="com.zjjhy.pojo.vo.UserVo">
-        select * from blog_account
-        <trim prefix="where " prefixOverrides="and">
-            <if test="user.id != null">and id != #{user.id}</if>
-            <if test="user.username != null">and username like concat('%',#{user.username},'%')</if>
-            <if test="user.pwd != null">and pwd = #{user.pwd}</if>
-            <if test="user.name != null">and name like concat('%',#{user.name},'%')}</if>
-            <if test="user.imgUrl != null">and img_url = #{user.imgUrl}</if>
-            <if test="user.role != null">and role = #{user.role}</if>
-            <if test="user.phone != null">and phone = #{user.phone}</if>
-            <if test="user.email != null">and email = #{user.email}</if>
-            <if test="user.createTime != null">and create_time = #{user.createTime}</if>
-            <if test="user.updateTime != null">and update_time = #{user.updateTime}</if>
-        </trim>
-        limit #{page},#{pageSize}
-    </select>
-
+    <!--添加用户-->
     <insert id="addUser">
         insert into blog_account
         <trim prefix="(" suffixOverrides="," suffix=")">
@@ -82,6 +52,7 @@
         </trim>
     </insert>
 
+    <!--删除用户-->
     <delete id="deleteUser">
         delete from blog_account
         where id in
@@ -90,27 +61,67 @@
         </foreach>
     </delete>
 
+    <!--编辑用户-->
     <update id="updateUser">
         update blog_account
         <include refid="updateUserByIf"/>
         where id = #{id}
     </update>
+
+    <!--修改个人信息-->
     <update id="personCenter">
         update blog_account
         <include refid="updateUserByIf"/>
         where id = #{id}
     </update>
 
-    <select id="getPersonPwd" resultType="com.zjjhy.pojo.vo.PwdVo">
-        select a.pwd
-        from blog_account a
-        where id = #{id}
-    </select>
-
+    <!--修改个人密码-->
     <update id="updatePwd">
         update blog_account
         set pwd=#{confirmPwd},
             update_time=#{updateTime}
         where id = #{id}
     </update>
+
+    <!--查询个人密码-->
+    <select id="getPersonPwd" resultType="com.zjjhy.common.pojo.vo.PwdVo">
+        select a.pwd
+        from blog_account a
+        where id = #{id}
+    </select>
+
+    <!--查询用户总数-->
+    <select id="queryUserTotal" resultType="java.lang.Integer">
+        <include refid="queryDocsTotal"/>
+        <trim prefix="where " prefixOverrides="and">
+            <if test="id != null">and id != #{id}</if>
+            <if test="username != null">and username like concat('%',#{username},'%')</if>
+            <if test="pwd != null">and pwd = #{pwd}</if>
+            <if test="name != null">and name like concat('%',#{name},'%')}</if>
+            <if test="imgUrl != null">and img_url = #{imgUrl}</if>
+            <if test="role != null">and role = #{role}</if>
+            <if test="phone != null">and phone = #{phone}</if>
+            <if test="email != null">and email = #{email}</if>
+            <if test="createTime != null">and create_time = #{createTime}</if>
+            <if test="updateTime != null">and update_time = #{updateTime}</if>
+        </trim>
+    </select>
+
+    <!--查询用户-->
+    <select id="queryUserData" resultType="com.zjjhy.common.pojo.vo.UserVo">
+        select * from blog_account
+        <trim prefix="where " prefixOverrides="and">
+            <if test="user.id != null">and id != #{user.id}</if>
+            <if test="user.username != null">and username like concat('%',#{user.username},'%')</if>
+            <if test="user.pwd != null">and pwd = #{user.pwd}</if>
+            <if test="user.name != null">and name like concat('%',#{user.name},'%')}</if>
+            <if test="user.imgUrl != null">and img_url = #{user.imgUrl}</if>
+            <if test="user.role != null">and role = #{user.role}</if>
+            <if test="user.phone != null">and phone = #{user.phone}</if>
+            <if test="user.email != null">and email = #{user.email}</if>
+            <if test="user.createTime != null">and create_time = #{user.createTime}</if>
+            <if test="user.updateTime != null">and update_time = #{user.updateTime}</if>
+        </trim>
+        limit #{page},#{pageSize}
+    </select>
 </mapper>

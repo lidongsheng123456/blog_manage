@@ -1,6 +1,6 @@
 package com.zjjhy.controller.common;
 
-import com.zjjhy.pojo.vo.Result;
+import com.zjjhy.common.pojo.vo.Result;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

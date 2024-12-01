@@ -20,7 +20,7 @@ spring:
     redis:
       host: ${blog.redis.host}
       port: ${blog.redis.port}
-      password: ${blog.redis.password}}
+      password: ${blog.redis.password}
       database: ${blog.redis.database}
   servlet:
     multipart:

@@ -15,6 +15,6 @@ blog:
   #redis数据源
   redis:
     host: localhost
-    port: 6378
+    port: 6379
     password: 123456
     database: 10

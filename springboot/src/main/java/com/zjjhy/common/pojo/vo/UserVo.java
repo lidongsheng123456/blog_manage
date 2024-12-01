@@ -1,13 +1,12 @@
-package com.zjjhy.pojo.dto;
+package com.zjjhy.common.pojo.vo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-public class UserDto {
+public class UserVo {
     private Integer id;
     private String username;
-    private String pwd;
     private String name;
     private String imgUrl;
     private String role;
@@ -18,13 +17,13 @@ public class UserDto {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
-    public UserDto() {
+
+    public UserVo() {
     }
 
-    public UserDto(Integer id, String username, String pwd, String name, String imgUrl, String role, String phone, String email, LocalDateTime createTime, LocalDateTime updateTime) {
+    public UserVo(Integer id, String username, String name, String imgUrl, String role, String phone, String email, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.username = username;
-        this.pwd = pwd;
         this.name = name;
         this.imgUrl = imgUrl;
         this.role = role;
@@ -68,24 +67,6 @@ public class UserDto {
      */
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    /**
-     * 获取
-     *
-     * @return pwd
-     */
-    public String getPwd() {
-        return pwd;
-    }
-
-    /**
-     * 设置
-     *
-     * @param pwd
-     */
-    public void setPwd(String pwd) {
-        this.pwd = pwd;
     }
 
     /**
@@ -215,6 +196,6 @@ public class UserDto {
     }
 
     public String toString() {
-        return "UserDto{id = " + id + ", username = " + username + ", pwd = " + pwd + ", name = " + name + ", imgUrl = " + imgUrl + ", role = " + role + ", phone = " + phone + ", email = " + email + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
+        return "UserVO{id = " + id + ", username = " + username + ", name = " + name + ", imgUrl = " + imgUrl + ", role = " + role + ", phone = " + phone + ", email = " + email + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
     }
 }

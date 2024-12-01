@@ -4,11 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.zjjhy.mapper.AdminSystemHomeMapper">
+    <!--定义复用的查询文档总数sql-->
     <sql id="queryDocsTotal">
         select count(*)
         from blog_docs
     </sql>
 
+    <!--定义复用的多表查询sql-->
     <sql id="queryDocs">
         select a.username, d.id, d.docs_title, d.docs_content, d.create_time
         from blog_docs d
@@ -16,16 +18,7 @@
         where d.account_id = a.id
     </sql>
 
-    <select id="queryDocsData" resultType="com.zjjhy.pojo.vo.DocsVo">
-        <include refid="queryDocs"/>
-        limit #{page},#{pageSize}
-    </select>
-
-    <select id="queryTotal" resultType="java.lang.Integer">
-        <include refid="queryDocsTotal">
-        </include>
-    </select>
-
+    <!--添加文档-->
     <insert id="addDocs">
         insert into blog_docs
         <trim prefix="(" suffixOverrides="," suffix=")">
@@ -44,6 +37,25 @@
         </trim>
     </insert>
 
+    <!--删除文档-->
+    <delete id="deleteDocs">
+        delete from blog_docs
+        where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--按照用户id删除文档-->
+    <delete id="deleteDocsByUserId">
+        delete from blog_docs
+        where account_id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--修改文档-->
     <update id="updateDocs">
         update blog_docs
         <trim prefix="set " suffixOverrides=",">
@@ -56,14 +68,7 @@
         where id=#{id}
     </update>
 
-    <delete id="deleteDocs">
-        delete from blog_docs
-        where id in
-        <foreach collection="list" item="id" open="(" separator="," close=")">
-            #{id}
-        </foreach>
-    </delete>
-
+    <!--查询文档总数-->
     <select id="queryByDocsTotal" resultType="java.lang.Integer">
         <include refid="queryDocsTotal"/>
         <where>
@@ -76,7 +81,8 @@
         </where>
     </select>
 
-    <select id="queryByDocsData" parameterType="object" resultType="com.zjjhy.pojo.vo.DocsVo">
+    <!--查询文档-->
+    <select id="queryByDocsData" parameterType="object" resultType="com.zjjhy.common.pojo.vo.DocsVo">
         select a.username, d.id, d.docs_title, d.docs_content, d.create_time
         from blog_docs d
         join blog_account a

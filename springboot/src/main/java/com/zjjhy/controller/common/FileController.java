@@ -3,7 +3,7 @@ package com.zjjhy.controller.common;
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.StrUtil;
-import com.zjjhy.pojo.vo.Result;
+import com.zjjhy.common.pojo.vo.Result;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;

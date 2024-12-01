@@ -1,7 +1,7 @@
 package com.zjjhy.controller.user;
 
-import com.zjjhy.pojo.dto.DocsDto;
-import com.zjjhy.pojo.vo.Result;
+import com.zjjhy.common.pojo.dto.DocsDto;
+import com.zjjhy.common.pojo.vo.Result;
 import com.zjjhy.service.FrontService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,14 @@ public class FrontController {
     @Autowired
     private FrontService frontService;
 
+    /**
+     * 前台用户获取数据
+     *
+     * @param docsDto
+     * @param page
+     * @param pageSize
+     * @return
+     */
     @GetMapping
     public Result getDocs(DocsDto docsDto,
                           @RequestParam("page") Integer page,

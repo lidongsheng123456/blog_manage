@@ -1,12 +1,13 @@
-package com.zjjhy.pojo.vo;
+package com.zjjhy.common.pojo.dto;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-public class UserVo {
+public class UserDto {
     private Integer id;
     private String username;
+    private String pwd;
     private String name;
     private String imgUrl;
     private String role;
@@ -17,13 +18,13 @@ public class UserVo {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
-
-    public UserVo() {
+    public UserDto() {
     }
 
-    public UserVo(Integer id, String username, String name, String imgUrl, String role, String phone, String email, LocalDateTime createTime, LocalDateTime updateTime) {
+    public UserDto(Integer id, String username, String pwd, String name, String imgUrl, String role, String phone, String email, LocalDateTime createTime, LocalDateTime updateTime) {
         this.id = id;
         this.username = username;
+        this.pwd = pwd;
         this.name = name;
         this.imgUrl = imgUrl;
         this.role = role;
@@ -67,6 +68,24 @@ public class UserVo {
      */
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    /**
+     * 获取
+     *
+     * @return pwd
+     */
+    public String getPwd() {
+        return pwd;
+    }
+
+    /**
+     * 设置
+     *
+     * @param pwd
+     */
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     /**
@@ -196,6 +215,6 @@ public class UserVo {
     }
 
     public String toString() {
-        return "UserVO{id = " + id + ", username = " + username + ", name = " + name + ", imgUrl = " + imgUrl + ", role = " + role + ", phone = " + phone + ", email = " + email + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
+        return "UserDto{id = " + id + ", username = " + username + ", pwd = " + pwd + ", name = " + name + ", imgUrl = " + imgUrl + ", role = " + role + ", phone = " + phone + ", email = " + email + ", createTime = " + createTime + ", updateTime = " + updateTime + "}";
     }
 }

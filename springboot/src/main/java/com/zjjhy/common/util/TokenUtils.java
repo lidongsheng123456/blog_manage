@@ -10,7 +10,7 @@ import com.zjjhy.common.context.BaseContext;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.enums.RoleEnum;
 import com.zjjhy.common.exception.BusinessException;
-import com.zjjhy.pojo.entity.User;
+import com.zjjhy.common.pojo.entity.User;
 import com.zjjhy.service.LoginService;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.Resource;

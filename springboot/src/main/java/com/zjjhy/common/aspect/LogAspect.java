@@ -6,7 +6,7 @@ import com.zjjhy.common.context.BaseContext;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.mapper.OperateLogMapper;
-import com.zjjhy.pojo.entity.OperateLog;
+import com.zjjhy.common.pojo.entity.OperateLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

@@ -1,15 +1,11 @@
 package com.zjjhy.controller.admin;
 
-import cn.hutool.core.util.ObjectUtil;
-import com.zjjhy.common.annotation.Log;
-import com.zjjhy.common.enums.ResultCodeEnum;
-import com.zjjhy.pojo.dto.PwdDto;
-import com.zjjhy.pojo.dto.UserDto;
-import com.zjjhy.pojo.entity.User;
-import com.zjjhy.pojo.vo.PageVo;
-import com.zjjhy.pojo.vo.PwdVo;
-import com.zjjhy.pojo.vo.Result;
-import com.zjjhy.pojo.vo.UserVo;
+import com.zjjhy.common.pojo.dto.PwdDto;
+import com.zjjhy.common.pojo.dto.UserDto;
+import com.zjjhy.common.pojo.entity.User;
+import com.zjjhy.common.pojo.vo.PageVo;
+import com.zjjhy.common.pojo.vo.PwdVo;
+import com.zjjhy.common.pojo.vo.Result;
 import com.zjjhy.service.AdminSystemUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +21,46 @@ public class AdminSystemUserController {
     private AdminSystemUserService adminSystemUserService;
 
     /**
-     * 分页查询
+     * 添加用户
+     *
+     * @param userDto
+     * @return
+     */
+    @PostMapping
+    public Result addDocs(@RequestBody UserDto userDto) {
+        log.info("添加用户：{}", userDto);
+        adminSystemUserService.addUser(userDto);
+        return Result.success();
+    }
+
+    /**
+     * 批量删除用户
+     *
+     * @param ids
+     * @return
+     */
+    @DeleteMapping
+    public Result deleteDocs(@RequestBody List<Integer> ids) {
+        log.info("删除用户：{}", ids);
+        adminSystemUserService.deleteUser(ids);
+        return Result.success();
+    }
+
+    /**
+     * 编辑用户
+     *
+     * @param userDto
+     * @return
+     */
+    @PutMapping
+    public Result updateDocs(@RequestBody UserDto userDto) {
+        log.info("编辑用户：{}", userDto);
+        adminSystemUserService.updateUser(userDto);
+        return Result.success();
+    }
+
+    /**
+     * 查询用户
      *
      * @param user
      * @param page
@@ -42,71 +77,16 @@ public class AdminSystemUserController {
     }
 
     /**
-     * 添加用户
-     *
-     * @param userDto
-     * @return
-     */
-    @Log
-    @PostMapping
-    public Result addDocs(@RequestBody UserDto userDto) {
-        log.info("添加用户：{}", userDto);
-        int i = adminSystemUserService.addUser(userDto);
-        if (i > 0) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
-    }
-
-    /**
-     * 批量删除用户
-     *
-     * @param ids
-     * @return
-     */
-    @Log
-    @DeleteMapping
-    public Result deleteDocs(@RequestBody List<Integer> ids) {
-        log.info("删除用户：{}", ids);
-        int i = adminSystemUserService.deleteUser(ids);
-        if (i > 0) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
-    }
-
-    /**
-     * 编辑用户
-     *
-     * @param userDto
-     * @return
-     */
-    @Log
-    @PutMapping
-    public Result updateDocs(@RequestBody UserDto userDto) {
-        log.info("编辑用户：{}", userDto);
-        int i = adminSystemUserService.updateUser(userDto);
-        if (i > 0) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
-    }
-
-    /**
      * 后台用户修改个人信息
      *
      * @param userDto
      * @return
      */
-    @Log
     @PutMapping("/personCenter")
     public Result personCenter(@RequestBody UserDto userDto) {
         log.info("个人中心修改信息：{}", userDto);
-        int i = adminSystemUserService.personCenter(userDto);
-        if (i > 0) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
+        adminSystemUserService.personCenter(userDto);
+        return Result.success();
     }
 
     /**
@@ -118,10 +98,7 @@ public class AdminSystemUserController {
     public Result getPersonPwd(@RequestParam("id") Integer id) {
         log.info("后台用户获取密码：{}", id);
         PwdVo pwd = adminSystemUserService.getPersonPwd(id);
-        if (!pwd.getPwd().isEmpty()) {
-            return Result.success(pwd);
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
+        return Result.success(pwd);
     }
 
     /**
@@ -129,15 +106,11 @@ public class AdminSystemUserController {
      *
      * @return
      */
-    @Log
     @PutMapping("/PersonPwd")
     public Result updatePwd(@RequestBody PwdDto pwdDto) {
         log.info("后台用户修改密码：{}", pwdDto);
-        int i = adminSystemUserService.updatePwd(pwdDto);
-        if (i > 0) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.SYSTEM_ERROR);
+        adminSystemUserService.updatePwd(pwdDto);
+        return Result.success();
     }
 
     /**
@@ -149,13 +122,7 @@ public class AdminSystemUserController {
     @PostMapping("/validateUser")
     public Result validateUser(@RequestBody UserDto userDto) {
         log.info("验证用户信息：{}", userDto);
-        if (ObjectUtil.isEmpty(userDto.getUsername())) {
-            return Result.error(ResultCodeEnum.PARAM_LOST_ERROR);
-        }
-        List<UserVo> list = adminSystemUserService.validateUser(userDto);
-        if (ObjectUtil.isEmpty(list)) {
-            return Result.success();
-        }
-        return Result.error(ResultCodeEnum.USER_EXIST_ERROR);
+        adminSystemUserService.validateUser(userDto);
+        return Result.success();
     }
 }

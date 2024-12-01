@@ -1,21 +1,47 @@
 package com.zjjhy.service;
 
-import com.zjjhy.pojo.dto.DocsDto;
-import com.zjjhy.pojo.vo.DocsVo;
-import com.zjjhy.pojo.vo.PageVo;
+import com.zjjhy.common.pojo.dto.DocsDto;
+import com.zjjhy.common.pojo.vo.DocsVo;
+import com.zjjhy.common.pojo.vo.PageVo;
 
 import java.util.List;
 
 public interface AdminSystemHomeService {
-    PageVo<DocsVo> queryDocsData(Integer page, Integer pageSize);
 
-    int addDocs(DocsDto dto);
+    /**
+     * 添加文档
+     *
+     * @param dto
+     */
+    void addDocs(DocsDto dto);
 
-    int updateDocs(DocsDto dto);
+    /**
+     * 删除文档
+     *
+     * @param ids
+     */
+    void deleteDocs(List<Integer> ids);
 
-    int deleteDocs(List<Integer> ids);
+    /**
+     * 编辑文档
+     *
+     * @param dto
+     */
+    void updateDocs(DocsDto dto);
 
+    /**
+     * 查询文档
+     *
+     * @param docsDto
+     * @param page
+     * @param pageSize
+     */
     PageVo<DocsVo> queryByDocsTitle(DocsDto docsDto, Integer page, Integer pageSize);
 
-    List<DocsVo> validateDocs(DocsDto docsDto);
+    /**
+     * 验证文档表单
+     *
+     * @param docsDto
+     */
+    void validateDocs(DocsDto docsDto);
 }

@@ -39,6 +39,7 @@ request.interceptors.response.use(response => {
 
         // 401 token令牌效验失败
         if (res.code === '401') {
+            localStorage.removeItem('xm-user')
             router.push('/login')
         }
 
