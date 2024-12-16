@@ -51,7 +51,7 @@ public interface AdminSystemHomeMapper {
     Integer queryByDocsTotal(Docs docs);
 
     /**
-     * 查询文档
+     * 根据文档标题查询文档
      *
      * @param docs
      * @param page
@@ -59,6 +59,13 @@ public interface AdminSystemHomeMapper {
      * @return
      */
     List<DocsVo> queryByDocsData(Docs docs, Integer page, Integer pageSize);
+
+    /**
+     * 查询文章与用户名
+     *
+     * @return
+     */
+    List<DocsVo> queryDocsData();
 
     /**
      * 验证文档表单
@@ -69,4 +76,11 @@ public interface AdminSystemHomeMapper {
     @Select("select * from blog_docs where docs_title=#{docsTitle}")
     List<DocsVo> docsDto(Docs docs);
 
+    /**
+     * 查询文档
+     *
+     * @return
+     */
+    @Select("select * from blog_docs")
+    List<Docs> queryByUsernameDocsData();
 }

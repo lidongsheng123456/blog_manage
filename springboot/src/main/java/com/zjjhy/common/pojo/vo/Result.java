@@ -2,7 +2,9 @@ package com.zjjhy.common.pojo.vo;
 
 import com.zjjhy.common.enums.ResultCodeEnum;
 
-public class Result {
+import java.io.Serializable;
+
+public class Result implements Serializable {
     private String code;
     private String msg;
     private Object data;
@@ -25,7 +27,7 @@ public class Result {
 //        Result tResult = new Result();
 //        tResult.setCode(ResultCodeEnum.SUCCESS.code);
 //        tResult.setMsg(ResultCodeEnum.SUCCESS.code);
-        return new Result("200","success",null);
+        return new Result("200", "success", null);
     }
 
     public static Result success(Object data) {

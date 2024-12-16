@@ -2,9 +2,10 @@ package com.zjjhy.common.pojo.dto;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class PwdDto {
+public class PwdDto implements Serializable {
     private Integer id;
     private String confirmPwd;
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")

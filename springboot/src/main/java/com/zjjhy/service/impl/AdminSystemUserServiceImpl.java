@@ -7,19 +7,21 @@ import com.zjjhy.common.enums.OperationTypeEnum;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.exception.BusinessException;
 import com.zjjhy.common.interface_constants.Constants;
-import com.zjjhy.mapper.AdminSystemHomeMapper;
-import com.zjjhy.mapper.AdminSystemUserMapper;
 import com.zjjhy.common.pojo.dto.PwdDto;
 import com.zjjhy.common.pojo.dto.UserDto;
+import com.zjjhy.common.pojo.entity.Docs;
 import com.zjjhy.common.pojo.entity.User;
 import com.zjjhy.common.pojo.vo.PageVo;
 import com.zjjhy.common.pojo.vo.PwdVo;
 import com.zjjhy.common.pojo.vo.UserVo;
+import com.zjjhy.mapper.AdminSystemHomeMapper;
+import com.zjjhy.mapper.AdminSystemUserMapper;
 import com.zjjhy.service.AdminSystemUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -55,11 +57,37 @@ public class AdminSystemUserServiceImpl implements AdminSystemUserService {
     @Transactional//开启事务要么删除用户和文章一起成功要么一起失败
     @Override
     public void deleteUser(List<Integer> ids) {
+        if (ObjectUtil.isEmpty(ids)) {
+            throw new BusinessException(ResultCodeEnum.PARAM_LOST_ERROR);
+        }
+
+        //删除用户
         int i1 = adminSystemUserMapper.deleteUser(ids);
-        //删除当前用户对应的文章
-        int i2 = adminSystemHomeMapper.deleteDocsByUserId(ids);
-        if (i1 == 0 || i2 == 0) {
+        if (i1 == 0) {
             throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
+        }
+
+        //查询所有文档
+        List<Docs> docsVos = adminSystemHomeMapper.queryByUsernameDocsData();
+
+        //存放文档交集的id
+        List<Integer> docsIds = new ArrayList<>();
+
+        //找出文档中的id与用户id的交集，并在相交时把文档id抽取出来
+        for (Integer id : ids) {
+            for (Docs docsVo : docsVos) {
+                if (id.equals(docsVo.getId())) {
+                    docsIds.add(docsVo.getId());
+                }
+            }
+        }
+
+        //删除当前用户对应的文章
+        if (ObjectUtil.isNotEmpty(docsIds)) {
+            int i2 = adminSystemHomeMapper.deleteDocsByUserId(docsIds);
+            if (i2 == 0) {
+                throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
+            }
         }
     }
 

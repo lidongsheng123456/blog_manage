@@ -6,14 +6,16 @@ import com.zjjhy.common.annotation.Log;
 import com.zjjhy.common.enums.OperationTypeEnum;
 import com.zjjhy.common.enums.ResultCodeEnum;
 import com.zjjhy.common.exception.BusinessException;
-import com.zjjhy.mapper.AdminSystemHomeMapper;
+import com.zjjhy.common.interface_constants.Constants;
 import com.zjjhy.common.pojo.dto.DocsDto;
 import com.zjjhy.common.pojo.entity.Docs;
 import com.zjjhy.common.pojo.vo.DocsVo;
 import com.zjjhy.common.pojo.vo.PageVo;
+import com.zjjhy.mapper.AdminSystemHomeMapper;
 import com.zjjhy.service.AdminSystemHomeService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +25,9 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
 
     @Autowired
     private AdminSystemHomeMapper adminSystemHomeMapper;
+
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate;
 
     /**
      * 添加文档
@@ -39,6 +44,8 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
         if (i == 0) {
             throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
         }
+        //删除redis存储的旧文档数据
+        redisTemplate.delete(Constants.REDIS_KEY);
     }
 
     /**
@@ -53,6 +60,8 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
         if (i == 0) {
             throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
         }
+        //删除redis存储的旧文档数据
+        redisTemplate.delete(Constants.REDIS_KEY);
     }
 
     /**
@@ -68,6 +77,8 @@ public class AdminSystemHomeServiceImpl implements AdminSystemHomeService {
         if (i == 0) {
             throw new BusinessException(ResultCodeEnum.SYSTEM_ERROR);
         }
+        //删除redis存储的旧文档数据
+        redisTemplate.delete(Constants.REDIS_KEY);
     }
 
     /**

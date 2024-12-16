@@ -11,7 +11,7 @@
       </div>
       <div class="FrontHome-header-b">
         <i class="el-icon-search"></i>
-        <input placeholder="请输入文档标题搜索"/>
+        <input v-model="docsTitle" placeholder="请输入文档标题搜索" @change="byDocsTitleQuery(docsTitle)"/>
         <router-link to="/front/frontHome">
           主页
         </router-link>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="FrontHome-content">
-      <router-view @update:user="update"></router-view>
+      <router-view ref="childComponent" @update:user="update"></router-view>
     </div>
   </div>
 </template>
@@ -37,7 +37,8 @@
 export default {
   data() {
     return {
-      userInfo: {}
+      userInfo: {},
+      docsTitle: null
     }
   },
   methods: {
@@ -47,6 +48,10 @@ export default {
     },
     update() {
       this.userInfo = JSON.parse(localStorage.getItem('xm-user'))
+    },
+    byDocsTitleQuery(title) {
+      console.log(title)
+      this.$refs.childComponent.initializer(title)
     }
   },
   created() {

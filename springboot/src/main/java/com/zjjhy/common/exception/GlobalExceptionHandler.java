@@ -12,14 +12,13 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(SystemException.class)
     public Result doSystemException(SystemException se) {
-        //没必要 调用 getCause 异常原因就只有当前这个异常，没有其他异常原因
-        log.error("系统异常:code={},msg={}", se.getCode(), se.getMessage());
+        log.error("系统异常:code={},msg={}", se.getCode(), se.getMessage(), se.getCause());
         return Result.error(se.getCode(), se.getMessage());
     }
 
     @ExceptionHandler(BusinessException.class)
     public Result doBusinessException(BusinessException be) {
-        log.error("业务异常:code={},msg={}", be.getCode(), be.getMessage());
+        log.error("业务异常:code={},msg={}", be.getCode(), be.getMessage(), be.getCause());
         return Result.error(be.getCode(), be.getMessage());
     }
 

@@ -54,7 +54,12 @@ const routes = [
                 meta: {name: '后台用户'},
                 component: () => import('@/views/manager/ManagerUser.vue')
             },
-
+            {
+                path: 'managerLog',
+                name: 'ManagerLog',
+                meta: {name: '操作日志'},
+                component: () => import('@/views/manager/ManagerLog.vue')
+            },
         ]
     },
     {

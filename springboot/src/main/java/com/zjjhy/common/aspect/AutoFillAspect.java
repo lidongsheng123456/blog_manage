@@ -35,8 +35,6 @@ public class AutoFillAspect {
      */
     @Before("autoFillPointCut()")
     public void autoFill(JoinPoint joinPoint) {
-        log.info("开始进行公共字段的填充...");
-
         //获取到当前被拦截的方法上的数据库操作类型
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();//方法签名对象
         AutoFill autoFill = signature.getMethod().getAnnotation(AutoFill.class);//获得方法上的注解对象
@@ -51,7 +49,7 @@ public class AutoFillAspect {
         //获取对象数组的第一个参数对象
         Object pojo = args[0];
 
-        log.info("args:{}", args);
+        log.info("开始公共字段的填充:{}", args);
 
         //准备赋值的数据
         LocalDateTime now = LocalDateTime.now();
@@ -84,5 +82,6 @@ public class AutoFillAspect {
                 throw new RuntimeException(e);
             }
         }
+        log.info("完成公共字段的填充:{}", args);
     }
 }

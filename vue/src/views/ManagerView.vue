@@ -30,7 +30,7 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu :default-active="$route.path" :default-openeds="['docs','user']" router style="border: none">
+        <el-menu :default-active="$route.path" :default-openeds="['docs','user','log']" router style="border: none">
           <el-menu-item index="/managerHome">
             <i class="el-icon-s-home"></i>
             <span style="font-weight: 540;font-size: 15px">系统首页</span>
@@ -49,11 +49,20 @@
             </template>
             <el-menu-item class="el-menu-submenu-item" index="/managerUser">用户信息</el-menu-item>
           </el-submenu>
+
+          <el-submenu index="log">
+            <template slot="title">
+              <i class="el-icon-menu"> 日志管理</i>
+            </template>
+            <el-menu-item class="el-menu-submenu-item" index="/managerLog">操作日志</el-menu-item>
+          </el-submenu>
         </el-menu>
       </el-aside>
       <el-container>
         <el-main>
-          <router-view @update:user="updateUser"></router-view>
+          <keep-alive>
+            <router-view @update:user="updateUser"></router-view>
+          </keep-alive>
         </el-main>
         <el-footer>湘ICP备2024092350号-1</el-footer>
       </el-container>

@@ -7,7 +7,6 @@ import com.zjjhy.common.pojo.vo.Result;
 import com.zjjhy.service.AdminSystemHomeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,9 +17,6 @@ import java.util.List;
 public class AdminSystemHomeController {
     @Autowired
     private AdminSystemHomeService adminSystemHomeService;
-
-    @Autowired
-    private RedisTemplate redisTemplate;
 
     /**
      * 添加文档

@@ -76,8 +76,8 @@ export default {
     }
   },
   methods: {
-    initializer() {
-      getDocs(this.docsTitle, this.page, this.pageSize).then(res => {
+    initializer(docsTitle = null) {
+      getDocs(docsTitle, this.page, this.pageSize).then(res => {
         if (res.code === '200') {
           this.docs = res.data.data
           this.total = res.data.total
@@ -93,11 +93,11 @@ export default {
     handleSizeChange(val) {
       this.page = 1
       this.pageSize = val
-      this.initializer(this.page, this.pageSize)
+      this.initializer()
     },
     handleCurrentChange(val) {
       this.page = val
-      this.initializer(this.page, this.pageSize)
+      this.initializer()
     }
   },
   created() {

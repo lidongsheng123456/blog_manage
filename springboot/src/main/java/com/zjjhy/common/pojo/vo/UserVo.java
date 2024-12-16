@@ -2,9 +2,10 @@ package com.zjjhy.common.pojo.vo;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class UserVo {
+public class UserVo implements Serializable {
     private Integer id;
     private String username;
     private String name;

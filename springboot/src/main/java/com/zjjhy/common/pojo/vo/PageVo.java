@@ -1,8 +1,9 @@
 package com.zjjhy.common.pojo.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class PageVo<T> {
+public class PageVo<T> implements Serializable {
     private Integer total;
     private List<T> data;
 

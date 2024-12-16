@@ -2,9 +2,10 @@ package com.zjjhy.common.pojo.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class User {
+public class User implements Serializable {
     private Integer id;
     private String username;
     private String pwd;

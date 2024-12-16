@@ -2,9 +2,11 @@ package com.zjjhy.common.pojo.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
-public class Docs {
+public class Docs implements Serializable {
     private Integer id;
     private Integer accountId;
     private String docsTitle;
@@ -132,6 +134,14 @@ public class Docs {
      */
     public void setUpdateTime(LocalDateTime updateTime) {
         this.updateTime = updateTime;
+    }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Docs docs)) return false;
+
+        return Objects.equals(getId(), docs.getId()) && Objects.equals(getAccountId(), docs.getAccountId()) && Objects.equals(getDocsTitle(), docs.getDocsTitle()) && Objects.equals(getDocsContent(), docs.getDocsContent()) && Objects.equals(getCreateTime(), docs.getCreateTime()) && Objects.equals(getUpdateTime(), docs.getUpdateTime());
     }
 
     public String toString() {

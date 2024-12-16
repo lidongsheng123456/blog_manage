@@ -97,4 +97,9 @@
         </trim>
         limit #{page},#{pageSize}
     </select>
+
+    <!--查询文章与用户名-->
+    <select id="queryDocsData" resultType="com.zjjhy.common.pojo.vo.DocsVo">
+        <include refid="queryDocs"/>
+    </select>
 </mapper>

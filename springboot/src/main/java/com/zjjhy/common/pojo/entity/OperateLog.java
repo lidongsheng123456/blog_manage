@@ -2,24 +2,54 @@ package com.zjjhy.common.pojo.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class OperateLog {
-    private Long id;
+/**
+ * (OperateLog)实体类
+ *
+ * @author makejava
+ * @since 2024-12-07 14:15:45
+ */
+public class OperateLog implements Serializable {
+    private static final long serialVersionUID = -46419863496522204L;
+
+    private Integer id;
+    /**
+     * 操作人id
+     */
     private String operateUserId;
+    /**
+     * 开始操作时间
+     */
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime operateTime;
+    /**
+     * 操作类名
+     */
     private String className;
+    /**
+     * 操作的方法名
+     */
     private String methodName;
+    /**
+     * 形参接收的参数
+     */
     private String methodParams;
+    /**
+     * 响应的数据
+     */
     private String returnValue;
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    /**
+     * 总耗时（毫秒）
+     */
     private Long costTime;
+
 
     public OperateLog() {
     }
 
-    public OperateLog(Long id, String operateUserId, LocalDateTime operateTime, String className, String methodName, String methodParams, String returnValue, Long costTime) {
+    public OperateLog(Integer id, String operateUserId, LocalDateTime operateTime, String className, String methodName, String methodParams, String returnValue, Long costTime) {
         this.id = id;
         this.operateUserId = operateUserId;
         this.operateTime = operateTime;
@@ -35,7 +65,7 @@ public class OperateLog {
      *
      * @return id
      */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -44,7 +74,7 @@ public class OperateLog {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -178,3 +208,4 @@ public class OperateLog {
         return "OperateLog{id = " + id + ", operateUserId = " + operateUserId + ", operateTime = " + operateTime + ", className = " + className + ", methodName = " + methodName + ", methodParams = " + methodParams + ", returnValue = " + returnValue + ", costTime = " + costTime + "}";
     }
 }
+

@@ -1,6 +1,8 @@
 package com.zjjhy.common.pojo.vo;
 
-public class PwdVo {
+import java.io.Serializable;
+
+public class PwdVo implements Serializable {
     private String pwd;
 
     public PwdVo() {
