@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjjhy.mapper.OperateLogMapper">
+
+    <resultMap type="com.zjjhy.common.pojo.entity.OperateLog" id="OperateLogMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="operateUserId" column="operate_user_id" jdbcType="VARCHAR"/>
+        <result property="operateTime" column="operate_time" jdbcType="TIMESTAMP"/>
+        <result property="className" column="class_name" jdbcType="VARCHAR"/>
+        <result property="methodName" column="method_name" jdbcType="VARCHAR"/>
+        <result property="methodParams" column="method_params" jdbcType="VARCHAR"/>
+        <result property="returnValue" column="return_value" jdbcType="VARCHAR"/>
+        <result property="costTime" column="cost_time" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <!--统计总行数-->
+    <select id="queryByLogTotal" resultType="java.lang.Integer">
+        select count(1)
+        from operate_log
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="operateUserId != null and operateUserId != ''">
+                and operate_user_id = #{operateUserId}
+            </if>
+            <if test="operateTime != null">
+                and operate_time = #{operateTime}
+            </if>
+            <if test="className != null and className != ''">
+                and class_name = #{className}
+            </if>
+            <if test="methodName != null and methodName != ''">
+                and method_name = #{methodName}
+            </if>
+            <if test="methodParams != null and methodParams != ''">
+                and method_params = #{methodParams}
+            </if>
+            <if test="returnValue != null and returnValue != ''">
+                and return_value = #{returnValue}
+            </if>
+            <if test="costTime != null">
+                and cost_time = #{costTime}
+            </if>
+        </where>
+    </select>
+
+
+    <!--查询指定行数据-->
+    <select id="queryByLogData" resultMap="OperateLogMap">
+        select
+        id, operate_user_id, operate_time, class_name, method_name, method_params, return_value, cost_time
+        from operate_log
+        <where>
+            <if test="operateLog.id != null">
+                and id = #{operateLog.id}
+            </if>
+            <if test="operateLog.operateUserId != null and operateLog.operateUserId != ''">
+                and operate_user_id = #{operateLog.operateUserId}
+            </if>
+            <if test="operateLog.operateTime != null">
+                and operate_time = #{operateLog.operateTime}
+            </if>
+            <if test="operateLog.className != null and operateLog.className != ''">
+                and class_name = #{operateLog.className}
+            </if>
+            <if test="operateLog.methodName != null and operateLog.methodName != ''">
+                and method_name = #{operateLog.methodName}
+            </if>
+            <if test="operateLog.methodParams != null and operateLog.methodParams != ''">
+                and method_params = #{operateLog.methodParams}
+            </if>
+            <if test="operateLog.returnValue != null and operateLog.returnValue != ''">
+                and return_value = #{operateLog.returnValue}
+            </if>
+            <if test="operateLog.costTime != null">
+                and cost_time = #{costTime}
+            </if>
+        </where>
+        limit #{page}, #{pageSize}
+    </select>
+
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete
+        from operate_log
+        where id in
+        <foreach collection="list" open="(" separator="," close=")" item="ids">
+            #{ids}
+        </foreach>
+    </delete>
+
+</mapper>
+
