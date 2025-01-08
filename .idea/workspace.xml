@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cdf9821a-8b91-4d97-9962-bc993c8e477b" name="更改" comment=".">
+      <change afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/application-production.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/src/assets/img/blog_logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easyCodeTableSettingEncode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/my_blog.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/SpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/SpringbootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/annotation/AutoFill.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/annotation/AutoFill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/annotation/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/annotation/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/aspect/AutoFillAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/aspect/AutoFillAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/aspect/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/aspect/LogAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/context/BaseContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/context/BaseContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/enums/MethodEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/enums/MethodEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/enums/OperationTypeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/enums/OperationTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/enums/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/enums/ResultCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/enums/RoleEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/enums/RoleEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/exception/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/exception/BusinessException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/exception/SystemException.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/exception/SystemException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/interceptor/JwtInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/interceptor/JwtInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/interface_constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/interface_constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/dto/DocsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/dto/DocsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/dto/PwdDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/dto/PwdDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/entity/Docs.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/entity/Docs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/entity/OperateLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/entity/OperateLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/vo/DocsVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/vo/DocsVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/vo/PageVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/vo/PageVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/vo/PwdVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/vo/PwdVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/vo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/vo/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/pojo/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/pojo/vo/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/common/util/TokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/common/util/TokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/admin/AdminSystemHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/admin/AdminSystemHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/admin/AdminSystemLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/admin/AdminSystemLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/admin/AdminSystemUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/admin/AdminSystemUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/common/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/common/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/common/WebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/common/WebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/user/UserSystemFrontController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/user/UserSystemFrontController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/controller/user/UserSystemLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/controller/user/UserSystemLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/mapper/AdminSystemHomeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/mapper/AdminSystemHomeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/mapper/AdminSystemUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/mapper/AdminSystemUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/mapper/LoginMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/mapper/LoginMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/mapper/OperateLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/mapper/OperateLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/AdminSystemHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/AdminSystemHomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/AdminSystemLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/AdminSystemLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/AdminSystemUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/AdminSystemUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/FrontService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/FrontService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/impl/AdminSystemHomeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/impl/AdminSystemHomeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/impl/AdminSystemLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/impl/AdminSystemLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/impl/AdminSystemUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/impl/AdminSystemUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/impl/FrontServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/impl/FrontServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/java/com/zjjhy/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/java/com/example/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application-develop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/application-develop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/com/zjjhy/mapper/AdminSystemHomeMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/com/zjjhy/mapper/AdminSystemUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/com/zjjhy/mapper/LoginMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/main/resources/com/zjjhy/mapper/OperateLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/zjjhy/springboot/HttpClientTestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/test/java/com/example/springboot/HttpClientTestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/zjjhy/springboot/POITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/test/java/com/example/springboot/POITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/zjjhy/springboot/SpringDataRedisTestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/test/java/com/example/springboot/SpringDataRedisTestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/src/test/java/com/zjjhy/springboot/TestBeanApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/test/java/com/example/springboot/TestBeanApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/application-develop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/target/classes/application-develop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/target/classes/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/SpringbootApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/annotation/AutoFill.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/annotation/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/aspect/AutoFillAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/aspect/LogAspect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/config/CorsConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/config/RedisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/config/WebConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/context/BaseContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/enums/MethodEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/enums/OperationTypeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/enums/ResultCodeEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/enums/RoleEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/exception/BusinessException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/exception/GlobalExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/exception/SystemException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/interceptor/JwtInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/interface_constants/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/dto/DocsDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/dto/PwdDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/dto/UserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/entity/Docs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/entity/OperateLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/vo/DocsVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/vo/PageVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/vo/PwdVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/vo/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/pojo/vo/UserVo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/common/util/TokenUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/admin/AdminSystemHomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/admin/AdminSystemLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/admin/AdminSystemUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/common/FileController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/common/WebController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/user/UserSystemFrontController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/controller/user/UserSystemLoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/AdminSystemHomeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/AdminSystemHomeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/mapper/AdminSystemHomeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/AdminSystemUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/AdminSystemUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/mapper/AdminSystemUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/LoginMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/LoginMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/mapper/LoginMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/OperateLogMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/mapper/OperateLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog_admin/src/main/resources/mapper/OperateLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/AdminSystemHomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/AdminSystemLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/AdminSystemUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/FrontService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/impl/AdminSystemHomeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/impl/AdminSystemLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/impl/AdminSystemUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/impl/FrontServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/classes/com/zjjhy/service/impl/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/zjjhy/springboot/HttpClientTestBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/zjjhy/springboot/POITest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/zjjhy/springboot/SpringDataRedisTestBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot/target/test-classes/com/zjjhy/springboot/TestBeanApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/vue/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/vue/.env.production" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/api/display/LoginRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/api/display/LoginRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/assets/img/博客-copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/vue/public/blog_logo.icon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/LoginView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/LoginView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/ManagerView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/ManagerView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/manager/ManagerDocs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/manager/ManagerDocs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/manager/ManagerHome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/manager/ManagerHome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/manager/ManagerLog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/manager/ManagerLog.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/src/views/manager/ManagerUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue/src/views/manager/ManagerUser.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Record" />
+        <option value="Vue Composition API Component" />
+        <option value="CSS File" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Vue Options API Component" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="李东升 &lt;208550738@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\develop\software\apache-maven-3.9.6" />
+        <option name="localRepository" value="D:\develop\software\apache-maven-3.9.6\mvn_repo" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\develop\software\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2p3zKYJeoCFsNVPJZbz1bnZWrvi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.SpringDataRedisTest.testCommon.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringDataRedisTest.testHash.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringDataRedisTest.testList.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringDataRedisTest.testRedisTemplate.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.SpringDataRedisTest.testSet.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringDataRedisTest.testString.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringDataRedisTest.testZset.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringbootApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SpringbootApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestApi.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestApi.test1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TestBeanApi.test2.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my_blog [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my_blog [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springboot [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springboot [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springboot [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.springboot [validate].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SpringbootApplication.executor&quot;: &quot;Run&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21 (2)&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/develop/idea_project/java_project/my_blog&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;D:\\develop\\software\\node\\npm.cmd&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.serve.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.14746094&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.28899083&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\develop\\software\\idea_src\\IntelliJ IDEA 2023.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.Main1.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.main1.executor&quot;: &quot;Run&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;,
+      &quot;Vue Options API Component&quot;
+    ]
+  }
+}</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zjjhy.mapper" />
+      <recent name="com.zjjhy.service" />
+      <recent name="com.zjjhy.entity.vo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develop\idea_project\java_project\my_blog\vue\public" />
+      <recent name="D:\develop\idea_project\java_project\my_blog\vue\src\assets\img" />
+      <recent name="D:\develop\idea_project\java_project\my_blog\springboot\src\main\resources" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\test\java\com\zjjhy\springboot" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\main\resources\com\zjjhy\mapper" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\develop\idea_project\java_project\my_blog\blog_admin\src\main\resources" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\main\resources\com\zjjhy\mapper" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\main\resources" />
+      <recent name="D:\develop\idea_project\my_blog\vue\src\assets\img" />
+      <recent name="D:\develop\idea_project\my_blog\vue\src\views\login" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zjjhy.mapper" />
+      <recent name="com.zjjhy" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zjjhy.common.config" />
+      <recent name="com.zjjhy.util" />
+      <recent name="com.zjjhy.controller.common" />
+      <recent name="com.zjjhy.common.properties" />
+      <recent name="com.zjjhy.common.aspect" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle 任务" flag="true" />
+      <visibility group="Grunt" flag="true" />
+      <visibility group="Gulp" flag="true" />
+      <visibility group="HTTP Requests" flag="true" />
+      <visibility group="HTTP 请求" flag="true" />
+      <visibility group="Maven 目标" flag="true" />
+      <visibility group="Node.js" flag="true" />
+      <visibility group="npm" flag="true" />
+      <visibility group="yarn" flag="true" />
+      <visibility group="最近的项目" flag="true" />
+      <visibility group="运行配置" flag="true" />
+    </myKeys>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringbootApplication">
+    <configuration name="TestBeanApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zjjhy.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springboot.TestBeanApi" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBeanApi.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zjjhy.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springboot.TestBeanApi" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zjjhy.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/vue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="D:\develop\software\node-v18.19.0\npm.cmd" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/vue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="$PROJECT_DIR$/../../../software/node-v18.19.0/node" />
+      <package-manager value="D:\develop\software\node-v18.19.0\npm.cmd" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/vue/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="$PROJECT_DIR$/../../software/node-v18.19.0/node" />
+      <package-manager value="D:\develop\software\node-v18.19.0\npm.cmd" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="JUnit.TestBeanApi" />
+        <item itemvalue="JUnit.TestBeanApi.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="cdf9821a-8b91-4d97-9962-bc993c8e477b" name="更改" comment="" />
+      <created>1731073095125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731073095125</updated>
+      <workItem from="1731073096169" duration="1158000" />
+      <workItem from="1732009484152" duration="62705000" />
+      <workItem from="1732241890015" duration="20965000" />
+      <workItem from="1732337657129" duration="66011000" />
+      <workItem from="1732443390068" duration="5920000" />
+      <workItem from="1732494489080" duration="1186000" />
+      <workItem from="1732497303781" duration="35583000" />
+      <workItem from="1732581049749" duration="43077000" />
+      <workItem from="1732666932754" duration="28522000" />
+      <workItem from="1732711818168" duration="9787000" />
+      <workItem from="1732753036496" duration="24712000" />
+      <workItem from="1732799077532" duration="29491000" />
+      <workItem from="1732881772594" duration="1140000" />
+      <workItem from="1732884676171" duration="202000" />
+      <workItem from="1732885647388" duration="406000" />
+      <workItem from="1732949179483" duration="52956000" />
+      <workItem from="1733098595063" duration="122000" />
+      <workItem from="1733098728446" duration="13297000" />
+      <workItem from="1733139212696" duration="2470000" />
+      <workItem from="1733184992735" duration="5401000" />
+      <workItem from="1733224490223" duration="4104000" />
+      <workItem from="1733236840706" duration="271000" />
+      <workItem from="1733237125663" duration="355000" />
+      <workItem from="1733239490200" duration="3000" />
+      <workItem from="1733547733118" duration="12000" />
+      <workItem from="1733550848527" duration="7562000" />
+      <workItem from="1733564626825" duration="2041000" />
+      <workItem from="1733644482068" duration="1759000" />
+      <workItem from="1734243091837" duration="53000" />
+      <workItem from="1734309484377" duration="1260000" />
+      <workItem from="1734316308917" duration="150000" />
+      <workItem from="1734316661646" duration="170000" />
+      <workItem from="1734316850105" duration="666000" />
+      <workItem from="1734317756662" duration="923000" />
+      <workItem from="1734318867421" duration="321000" />
+      <workItem from="1734338588626" duration="5000" />
+      <workItem from="1734354903450" duration="4000" />
+      <workItem from="1734404560718" duration="5180000" />
+      <workItem from="1734507601277" duration="10000" />
+      <workItem from="1734658331111" duration="15000" />
+      <workItem from="1735202914691" duration="732000" />
+      <workItem from="1735458381059" duration="17000" />
+      <workItem from="1735888694042" duration="169000" />
+      <workItem from="1735981325222" duration="15612000" />
+      <workItem from="1736070243176" duration="3104000" />
+      <workItem from="1736081222736" duration="1359000" />
+      <workItem from="1736131515036" duration="5113000" />
+      <workItem from="1736294471895" duration="11125000" />
+      <workItem from="1736307920136" duration="15000" />
+      <workItem from="1736307939594" duration="405000" />
+      <workItem from="1736324275191" duration="12000" />
+    </task>
+    <task id="LOCAL-00001">
+      <option name="closed" value="true" />
+      <created>1732697002799</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732697002799</updated>
+    </task>
+    <task id="LOCAL-00002" summary="前后台管理初始代码">
+      <option name="closed" value="true" />
+      <created>1732697291304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732697291304</updated>
+    </task>
+    <task id="LOCAL-00003" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760408076</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760408077</updated>
+    </task>
+    <task id="LOCAL-00004" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760428827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760428827</updated>
+    </task>
+    <task id="LOCAL-00005" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760440404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760440404</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能">
+      <option name="closed" value="true" />
+      <created>1732884828264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732884828264</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能">
+      <option name="closed" value="true" />
+      <created>1732884850706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732884850706</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式">
+      <option name="closed" value="true" />
+      <created>1733036236455</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733036236455</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式">
+      <option name="closed" value="true" />
+      <created>1733036257987</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733036257987</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <option name="closed" value="true" />
+      <created>1734317069629</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734317069629</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1734318025426</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734318025426</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1734318882530</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734318882530</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.test" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="w" />
+    <MESSAGE value="前后台管理初始代码" />
+    <MESSAGE value="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能" />
+    <MESSAGE value="升级业务" />
+    <MESSAGE value="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能" />
+    <MESSAGE value="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="jdk.proxy2.$Proxy75" memberName="h" />
+        <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
+        <PinnedItemInfo parentTag="org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint$MethodSignatureImpl" memberName="this$0" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

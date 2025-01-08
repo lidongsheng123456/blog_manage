@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.AdminSystemHomeMapper">
+    <!--定义复用的查询文档总数sql-->
+    <sql id="queryDocsTotal">
+        select count(*)
+        from blog_docs
+    </sql>
+
+    <!--定义复用的多表查询sql-->
+    <sql id="queryDocs">
+        select a.username, d.id, d.docs_title, d.docs_content, d.create_time
+        from blog_docs d
+                 join blog_account a
+        where d.account_id = a.id
+    </sql>
+
+    <!--添加文档-->
+    <insert id="addDocs">
+        insert into blog_docs
+        <trim prefix="(" suffixOverrides="," suffix=")">
+            <if test="accountId != null">account_id,</if>
+            <if test="docsTitle != null">docs_title,</if>
+            <if test="docsContent != null">docs_content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffixOverrides="," suffix=")">
+            <if test="accountId != null">#{accountId},</if>
+            <if test="docsTitle != null">#{docsTitle},</if>
+            <if test="docsContent != null">#{docsContent},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <!--删除文档-->
+    <delete id="deleteDocs">
+        delete from blog_docs
+        where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--按照用户id删除文档-->
+    <delete id="deleteDocsByUserId">
+        delete from blog_docs
+        where account_id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--修改文档-->
+    <update id="updateDocs">
+        update blog_docs
+        <trim prefix="set " suffixOverrides=",">
+            <if test="accountId != null">account_id=#{accountId},</if>
+            <if test="docsTitle != null">docs_title=#{docsTitle},</if>
+            <if test="docsContent != null">docs_content=#{docsContent},</if>
+            <if test="createTime != null">create_time=#{createTime},</if>
+            <if test="updateTime != null">update_time=#{updateTime},</if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!--查询文档总数-->
+    <select id="queryByDocsTotal" resultType="java.lang.Integer">
+        <include refid="queryDocsTotal"/>
+        <where>
+            <if test="id != null">and id=#{id}</if>
+            <if test="accountId != null">and account_id=#{accountId}</if>
+            <if test="docsTitle != null">and docs_title like concat('%',#{docsTitle},'%')</if>
+            <if test="docsContent != null">and docs_content like concat('%',#{docsContent}'%')</if>
+            <if test="createTime != null">and createTime=#{createTime}</if>
+            <if test="updateTime != null">and updateTime=#{updateTime}</if>
+        </where>
+    </select>
+
+    <!--查询文档-->
+    <select id="queryByDocsData" parameterType="object" resultType="com.example.common.pojo.vo.DocsVo">
+        select a.username, d.id, d.docs_title, d.docs_content, d.create_time
+        from blog_docs d
+        join blog_account a
+        <trim prefix="where ">
+            d.account_id = a.id
+            <if test="docs.id != null">and id=#{docs.id}</if>
+            <if test="docs.accountId != null">and account_id=#{docs.accountId}</if>
+            <if test="docs.docsTitle != null">and docs_title like concat('%',#{docs.docsTitle},'%')</if>
+            <if test="docs.docsContent != null">and docs_content like concat('%',#{docs.docsContent}'%')</if>
+            <if test="docs.createTime != null">and create_time=#{docs.createTime}</if>
+            <if test="docs.updateTime != null">and update_time=#{docs.updateTime}</if>
+        </trim>
+        limit #{page},#{pageSize}
+    </select>
+
+    <!--查询文章与用户名-->
+    <select id="queryDocsData" resultType="com.example.common.pojo.vo.DocsVo">
+        <include refid="queryDocs"/>
+    </select>
+</mapper>
