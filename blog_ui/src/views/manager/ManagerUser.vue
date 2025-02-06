@@ -91,7 +91,7 @@
       <el-form ref="formRef" :model="form" :rules="rules">
         <div style="font-size: 20px;font-weight: 600;color: #2e324c;margin-bottom: 10px">点击上传头像</div>
         <el-upload
-            :action="baseURL + '/files/upload'"
+            :action="baseURL + '/common/files/upload'"
             :before-upload="beforeAvatarUpload"
             :on-success="handleAvatarSuccess"
             :show-file-list="false"
@@ -137,8 +137,10 @@ import axios from "axios";
 
 export default {
   data() {
+    // 验证用户名是否存在
     const validateUsername = ((rule, value, callback) => {
-      validateUser({[rule.fullField]: value}).then((res) => {
+      const USERID = this.form.id ? this.form.id : null
+      validateUser({[rule.fullField]: value, id: USERID}).then((res) => {
         if (res.code === '200') {
           callback()
         }
@@ -148,6 +150,27 @@ export default {
         }
       })
     })
+
+    // 手机号正则表达式
+    const validatePhone = (rule, value, callback) => {
+      const phoneRegex = /^1[3-9]\d{9}$/;
+      if (!phoneRegex.test(value)) {
+        callback(new Error('请输入有效的11位手机号'));
+      } else {
+        callback();
+      }
+    };
+
+    // 邮箱正则表达式
+    const validateEmail = (rule, value, callback) => {
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if (!emailRegex.test(value)) {
+        callback(new Error('请输入有效的邮箱地址'));
+      } else {
+        callback();
+      }
+    };
+
     return {
       //当前登录的用户信息
       userInfo: {},
@@ -183,10 +206,10 @@ export default {
           {required: true, message: '请选择角色', trigger: 'blur'}
         ],
         phone: [
-          {required: true, message: '请输入手机号', trigger: 'blur'}
+          {required: true, validator: validatePhone, trigger: 'blur'}
         ],
         email: [
-          {required: true, message: '请输入电子邮箱', trigger: 'blur'}
+          {required: true, validator: validateEmail, trigger: 'blur'}
         ]
       },
       //角色复选框

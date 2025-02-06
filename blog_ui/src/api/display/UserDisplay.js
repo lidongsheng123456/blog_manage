@@ -3,7 +3,7 @@ import request from "@/util/request";
 //分页显示文档
 export function queryUserData(id, username, page, pageSize) {
     return request({
-        url: '/user/queryUserData',
+        url: '/admin/user/queryUserData',
         method: 'GET',
         params: {
             id: id,
@@ -17,7 +17,7 @@ export function queryUserData(id, username, page, pageSize) {
 //添加文档
 export function addUser(data) {
     return request({
-        url: '/user',
+        url: '/admin/user',
         method: 'POST',
         data: data
     })
@@ -26,7 +26,7 @@ export function addUser(data) {
 //删除文档
 export function deleteUser(data) {
     return request({
-        url: '/user',
+        url: '/admin/user',
         method: 'DELETE',
         data: data
     })
@@ -35,7 +35,7 @@ export function deleteUser(data) {
 //修改文档
 export function updateUser(data) {
     return request({
-        url: '/user',
+        url: '/admin/user',
         method: 'PUT',
         data: data
     })
@@ -44,7 +44,7 @@ export function updateUser(data) {
 //个人中心
 export function personCenter(data) {
     return request({
-        url: '/user/personCenter',
+        url: '/admin/user/personCenter',
         method: 'PUT',
         data: data
     })
@@ -52,7 +52,7 @@ export function personCenter(data) {
 
 export function getPersonPwd(id) {
     return request({
-        url: '/user/PersonPwd',
+        url: '/admin/user/PersonPwd',
         method: 'GET',
         params: id
     })
@@ -61,7 +61,7 @@ export function getPersonPwd(id) {
 //更新密码
 export function updatePwd(data) {
     return request({
-        url: '/user/PersonPwd',
+        url: '/admin/user/PersonPwd',
         method: 'PUT',
         data: data
     })
@@ -70,7 +70,7 @@ export function updatePwd(data) {
 //效验用户信息
 export function validateUser(data) {
     return request({
-        url: '/user/validateUser',
+        url: '/admin/user/validateUser',
         method: 'POST',
         data: data
     })

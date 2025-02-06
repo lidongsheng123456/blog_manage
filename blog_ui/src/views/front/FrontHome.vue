@@ -53,7 +53,7 @@
     </div>
     <div class="FrontHome-content-bottom" style="text-align: center">
       <div>
-        备案信息
+        备案信息 {{ beiAn }}
       </div>
     </div>
   </div>
@@ -72,8 +72,9 @@ export default {
       docsTitle: '',
       page: 1,
       pageSize: 5,
-      total: 0
-    }
+      total: 0,
+      beiAn: process.env.VUE_APP_BASEURL
+    };
   },
   methods: {
     initializer(docsTitle = null) {
@@ -103,6 +104,9 @@ export default {
   created() {
     this.userInfo = JSON.parse(localStorage.getItem('xm-user'))
     this.initializer()
+    setTimeout(() => {
+      console.log(this.beiAn)
+    }, 1000)
   }
 }
 </script>

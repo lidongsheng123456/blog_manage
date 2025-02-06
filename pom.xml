@@ -4,6 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.0</version>
+        <relativePath/>
+    </parent>
+
     <groupId>com.example</groupId>
     <artifactId>blog_manage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
@@ -11,35 +18,30 @@
 
     <modules>
         <module>blog_admin</module>
+        <module>blog_common</module>
+        <module>blog_framework</module>
+        <module>blog_system</module>
     </modules>
 
     <description>博客管理系统</description>
 
     <properties>
+        <spring-boot.version>3.1.0</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring-boot.version>3.1.0</spring-boot.version> <!-- 使用你所需的 Spring Boot 版本 -->
         <mybatis-spring-boot-starter.version>3.0.3</mybatis-spring-boot-starter.version>
-        <hutool-all.version>5.8.18</hutool-all.version>
+        <hutool-all.version>5.8.26</hutool-all.version>
         <java-jwt.version>4.3.0</java-jwt.version>
         <aliyun-sdk-oss.version>3.15.1</aliyun-sdk-oss.version>
         <fastjson.version>1.2.76</fastjson.version>
         <annotations.version>26.0.1</annotations.version>
         <poi-ooxml.version>5.2.3</poi-ooxml.version>
-        <jackson-datatype-jsr310.version>2.17.2</jackson-datatype-jsr310.version>
         <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
+        <lombok.version>1.18.30</lombok.version>
+        <jjwt>0.9.1</jjwt>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- 导入 Spring Boot 依赖管理 -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
             <!-- 显式声明其他依赖的版本 -->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
@@ -56,7 +58,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.28</version> <!-- 使用你所需的 Lombok 版本 -->
+                <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
 
@@ -98,17 +100,30 @@
             </dependency>
 
             <dependency>
-                <groupId>com.fasterxml.jackson.datatype</groupId>
-                <artifactId>jackson-datatype-jsr310</artifactId>
-                <version>${jackson-datatype-jsr310.version}</version>
-            </dependency>
-
-            <!-- 添加 mybatis-spring-boot-starter-test 的版本 -->
-            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter-test</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>blog_common</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>blog_framework</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>blog_system</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

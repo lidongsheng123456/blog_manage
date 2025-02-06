@@ -1,44 +1,17 @@
 package com.example.springboot;
 
-import com.example.common.pojo.entity.Docs;
+import cn.hutool.captcha.CaptchaUtil;
+import cn.hutool.captcha.ShearCaptcha;
+import cn.hutool.captcha.generator.MathGenerator;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TestBeanApi {
     @Test
-    public void test1() {
-        List<Integer> list = new ArrayList<>();
-        list.add(5);
-        list.add(1);
-        list.add(45);
-        list.add(35);
-        list.add(37);
-        list.add(8);
-        deleteUser(list);
-    }
-
-    public void deleteUser(List<Integer> ids) {
-        List<Docs> docsVos = new ArrayList<>();
-        //假如这是从数据库查出来的文章数据
-        docsVos.add(new Docs(5, null, null, null, null, null));
-        docsVos.add(new Docs(3, null, null, null, null, null));
-        docsVos.add(new Docs(8, null, null, null, null, null));
-        docsVos.add(new Docs(12, null, null, null, null, null));
-        docsVos.add(new Docs(15, null, null, null, null, null));
-        docsVos.add(new Docs(1, null, null, null, null, null));
-
-        List<Integer> docsIds = new ArrayList<>();
-
-        for (Integer idss : ids) {
-            for (Docs docsVo : docsVos) {
-                if (idss.equals(docsVo.getId())) {
-                    docsIds.add(docsVo.getId());
-                }
-            }
-        }
-
-        docsIds.forEach(System.out::println);
+    void getCaptcha() {
+        ShearCaptcha captcha = CaptchaUtil.createShearCaptcha(200, 45, 4, 4);
+// 自定义验证码内容为四则运算方式
+        captcha.setGenerator(new MathGenerator());
+// 重新生成code
+        captcha.createCode();
     }
 }

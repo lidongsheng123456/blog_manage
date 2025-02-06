@@ -11,9 +11,10 @@
         </el-form-item>
         <el-form-item prop="code">
           <div style="display: flex">
-            <el-input v-model="loginForm.code" placeholder="验证码" prefix-icon="el-icon-postcard"></el-input>
+            <el-input v-model="loginForm.code" placeholder="验证码" prefix-icon="el-icon-postcard"
+                      @keyup.enter.native="login"></el-input>
             <div class="login-code">
-              <img :src="codeUrl || require('@/assets/img/bj.jpg')" class="login-code-img" alt="验证码"/>
+              <img id="verificationCodeImg" title="看不清？换一张" alt="点击一下试试" @click="getCaptcha" src=""/>
             </div>
           </div>
         </el-form-item>
@@ -41,17 +42,17 @@
 
 <script>
 
-import {getCodeImg, login} from "@/api/display/LoginRequest";
+import {getCaptcha, login} from "@/api/display/LoginRequest";
 
 export default {
   data() {
     return {
+      baseUrl: process.env.VUE_APP_BASEURL,
       codeUrl: "",
       loginForm: {
         username: "admin",
         pwd: "123456",
         code: "",
-        uuid: ""
       },
       loginRules: {
         username: [
@@ -64,18 +65,14 @@ export default {
           {required: true, message: "请输入验证码", trigger: "change"}
         ]
       },
-      loading: false,
-      // 验证码开关
-      captchaEnabled: true
+      loading: false
     }
   },
   methods: {
-    getCode() {
-      getCodeImg().then(res => {
-        this.captchaEnabled = res.captchaEnabled === undefined ? true : res.captchaEnabled;
-        if (this.captchaEnabled) {
-          this.codeUrl = "data:image/gif;base64," + res.img;
-          this.loginForm.uuid = res.uuid;
+    getCaptcha() {
+      getCaptcha().then(imageUrl => {
+        if (imageUrl) {
+          document.getElementById('verificationCodeImg').src = imageUrl;
         }
       });
     },
@@ -93,14 +90,16 @@ export default {
               this.$message.error(res.msg)
             }
           }).catch(() => {
+            this.getCode();
+          }).finally(() => {
             this.loading = false;
-            if (this.captchaEnabled) {
-              this.getCode();
-            }
           })
         }
       })
     }
+  },
+  mounted() {
+    this.getCaptcha();
   }
 }
 </script>

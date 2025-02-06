@@ -7,7 +7,7 @@
       <el-form ref="formRef" :model="userInfo" :rules="rules">
         <div style="font-size: 20px;font-weight: 600;color: #2e324c;margin-bottom: 10px">点击上传头像</div>
         <el-upload
-            :action="baseURL + '/files/upload'"
+            :action="baseURL + '/common/files/upload'"
             :before-upload="beforeAvatarUpload"
             :on-success="handleAvatarSuccess"
             :show-file-list="false"

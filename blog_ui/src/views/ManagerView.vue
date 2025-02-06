@@ -17,7 +17,7 @@
         <el-dropdown placement="bottom">
           <div class="img">
             <el-image :src="userInfo.imgUrl || 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png'"
-                      alt="img" style="width: 50px;border-radius: 50%"/>
+                      alt="img" style="height: 50px;border-radius: 50%"/>
             <div style="margin-left: 15px;color: white;font-size: 15px">{{ userInfo.username || '管理员' }}</div>
           </div>
           <el-dropdown-menu>

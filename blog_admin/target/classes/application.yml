@@ -7,7 +7,7 @@ spring:
   profiles:
     # 不同环境下的配置文件名 例：application-develop.yml
     # 根据"-"后面的名字来决定加载哪个环境配置文件
-    active: production
+    active: develop
   # 允许Spring Boot 或其他 YAML 解析器会允许对象之间的循环引用关系(我引用你的属性，你引用我的属性)
   main:
     allow-circular-references: true
@@ -35,3 +35,12 @@ mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+
+blog:
+  jwt:
+    admin-token-name: token
+    admin-secret-key: adminblog
+    admin-ttl: 7200000
+    user-token-name: token
+    user-secret-key: userblog
+    user-ttl: 7200000

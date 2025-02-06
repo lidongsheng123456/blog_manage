@@ -98,7 +98,8 @@ export default {
   data() {
     //数据库不能存在俩个相同文章标题
     const validateDocsTitle = ((rule, value, callback) => {
-      validateDocs({[rule.fullField]: value}).then((res) => {
+      const DOCSID = this.form.id ? this.form.id : null
+      validateDocs({[rule.fullField]: value, id: DOCSID}).then((res) => {
         if (res.code === '200') {
           callback()
         }

@@ -1,8 +1,8 @@
 import request from "@/util/request";
 
-export function queryOperateLog(methodName = null, page, pageSize) {
+export function queryOperateLog(methodName, page, pageSize) {
     return request({
-        url: '/operateLog',
+        url: '/admin/operateLog',
         method: 'GET',
         params: {
             methodName,
@@ -14,7 +14,7 @@ export function queryOperateLog(methodName = null, page, pageSize) {
 
 export function deleteOperateLog(data) {
     return request({
-        url: '/operateLog',
+        url: '/admin/operateLog',
         method: 'DELETE',
         data: data
     })

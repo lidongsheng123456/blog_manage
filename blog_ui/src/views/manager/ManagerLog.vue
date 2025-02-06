@@ -91,7 +91,7 @@ export default {
       userInfo: {},
       //页面初始分页数据
       page: 1,
-      pageSize: 5,
+      pageSize: 10,
       //数据总数
       total: 0,
       //复选框id
@@ -107,7 +107,7 @@ export default {
   methods: {
     //分页查询文档
     initialize() {
-      queryOperateLog(null, this.page, this.pageSize).then(res => {
+      queryOperateLog(this.queryMethodsName, this.page, this.pageSize).then(res => {
         if (res.code === '200') {
           this.tableData = res.data.data
           this.total = res.data.total

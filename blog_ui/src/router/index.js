@@ -64,7 +64,7 @@ const routes = [
     },
     {
         //前台路由
-        path: '/front',
+        path: '/user',
         name: 'Front',
         component: () => import('@/views/FrontView.vue'),
         children: [
@@ -133,7 +133,7 @@ router.beforeEach((to, from, next) => {
                 next('/managerHome')
             } else {
                 //查看用户权限导航到前台
-                next('/front/frontHome')
+                next('/user/frontHome')
             }
         } else {
             //没获取到重新登录
