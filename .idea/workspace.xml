@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cdf9821a-8b91-4d97-9962-bc993c8e477b" name="更改" comment="." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/blog_framework">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Record" />
+        <option value="Vue Composition API Component" />
+        <option value="CSS File" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Vue Options API Component" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="李东升 &lt;208550738@qq.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\develop\software\apache-maven-3.9.6" />
+        <option name="localRepository" value="D:\develop\software\apache-maven-3.9.6\mvn_repo" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\develop\software\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2p3zKYJeoCFsNVPJZbz1bnZWrvi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "JUnit.SpringDataRedisTest.testCommon.executor": "Run",
+    "JUnit.SpringDataRedisTest.testHash.executor": "Run",
+    "JUnit.SpringDataRedisTest.testList.executor": "Run",
+    "JUnit.SpringDataRedisTest.testRedisTemplate.executor": "Debug",
+    "JUnit.SpringDataRedisTest.testSet.executor": "Run",
+    "JUnit.SpringDataRedisTest.testString.executor": "Run",
+    "JUnit.SpringDataRedisTest.testZset.executor": "Run",
+    "JUnit.SpringDataRedisTestBean.testRedisTemplate.executor": "Run",
+    "JUnit.SpringDataRedisTestBean.testString.executor": "Run",
+    "JUnit.SpringbootApplicationTests.contextLoads.executor": "Run",
+    "JUnit.SpringbootApplicationTests.executor": "Run",
+    "JUnit.TestApi.executor": "Run",
+    "JUnit.TestApi.test1.executor": "Run",
+    "JUnit.TestBeanApi.executor": "Run",
+    "JUnit.TestBeanApi.getCaptcha.executor": "Run",
+    "JUnit.TestBeanApi.test2.executor": "Run",
+    "Maven.blog_admin [clean].executor": "Run",
+    "Maven.blog_admin [install].executor": "Run",
+    "Maven.blog_common [clean].executor": "Run",
+    "Maven.blog_common [compile].executor": "Run",
+    "Maven.blog_common [install].executor": "Run",
+    "Maven.blog_common [validate].executor": "Run",
+    "Maven.blog_framework [clean].executor": "Run",
+    "Maven.blog_framework [install].executor": "Run",
+    "Maven.blog_manage [clean].executor": "Run",
+    "Maven.blog_manage [compile].executor": "Run",
+    "Maven.blog_manage [install].executor": "Run",
+    "Maven.blog_manage [package].executor": "Run",
+    "Maven.blog_manage [test].executor": "Run",
+    "Maven.blog_manage [validate].executor": "Run",
+    "Maven.blog_system [clean].executor": "Run",
+    "Maven.blog_system [install].executor": "Run",
+    "Maven.my_blog [clean].executor": "Run",
+    "Maven.my_blog [install].executor": "Run",
+    "Maven.springboot [clean].executor": "Run",
+    "Maven.springboot [compile].executor": "Run",
+    "Maven.springboot [package].executor": "Run",
+    "Maven.springboot [validate].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.BlogApplication.executor": "Run",
+    "Spring Boot.SpringbootApplication.executor": "Run",
+    "extract.method.default.visibility": "private",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/develop/idea_project/java_project/blog_manage",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "D:\\develop\\software\\node\\npm.cmd",
+    "npm.build.executor": "Run",
+    "npm.serve (1).executor": "Run",
+    "npm.serve.executor": "Run",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.14746094",
+    "project.structure.side.proportion": "0.28899083",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "ts.external.directory.path": "D:\\develop\\software\\idea_src\\IntelliJ IDEA 2024.3.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.Main1.executor": "Run",
+    "应用程序.main1.executor": "Run"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "vue.recent.templates": [
+      "Vue Composition API Component",
+      "Vue Options API Component"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zjjhy.mapper" />
+      <recent name="com.zjjhy.service" />
+      <recent name="com.zjjhy.entity.vo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\develop\idea_project\java_project\blog_manage\blog_ui\src" />
+      <recent name="D:\develop\idea_project\java_project\blog_manage\blog_framework\src\main\java\com\example\framework\interceptor" />
+      <recent name="D:\develop\idea_project\java_project\blog_manage\blog_framework\src\main\java\com\example\framework\web" />
+      <recent name="D:\develop\idea_project\java_project\my_blog\vue\public" />
+      <recent name="D:\develop\idea_project\java_project\my_blog\vue\src\assets\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\develop\idea_project\java_project\blog_manage\blog_system\src\main\resources" />
+      <recent name="D:\develop\idea_project\java_project\my_blog\blog_admin\src\main\resources" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\main\resources\com\zjjhy\mapper" />
+      <recent name="D:\develop\idea_project\my_blog\springboot\src\main\resources" />
+      <recent name="D:\develop\idea_project\my_blog\vue\src\assets\img" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example" />
+      <recent name="com.zjjhy.mapper" />
+      <recent name="com.zjjhy" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.common.properties" />
+      <recent name="com.example.common.util" />
+      <recent name="com.zjjhy.common.config" />
+      <recent name="com.zjjhy.util" />
+      <recent name="com.zjjhy.controller.common" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <myKeys>
+      <visibility group="Gradle 任务" flag="true" />
+      <visibility group="Grunt" flag="true" />
+      <visibility group="Gulp" flag="true" />
+      <visibility group="HTTP Requests" flag="true" />
+      <visibility group="HTTP 请求" flag="true" />
+      <visibility group="Maven 目标" flag="true" />
+      <visibility group="Node.js" flag="true" />
+      <visibility group="npm" flag="true" />
+      <visibility group="yarn" flag="true" />
+      <visibility group="最近的项目" flag="true" />
+      <visibility group="运行配置" flag="true" />
+    </myKeys>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
+    <configuration name="SpringDataRedisTestBean.testString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springboot.SpringDataRedisTestBean" />
+      <option name="METHOD_NAME" value="testString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBeanApi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zjjhy.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springboot.TestBeanApi" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestBeanApi.getCaptcha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.springboot" />
+      <option name="MAIN_CLASS_NAME" value="com.example.springboot.TestBeanApi" />
+      <option name="METHOD_NAME" value="getCaptcha" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="blog_admin" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.BlogApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="springboot" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zjjhy.SpringbootApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/blog_ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="$PROJECT_DIR$/../../../software/node-v18.19.0/node" />
+      <package-manager value="D:\develop\software\node-v18.19.0\npm.cmd" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="serve (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/blog_ui/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="D:\develop\software\node-v18.19.0\npm.cmd" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.serve (1)" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="JUnit.TestBeanApi.getCaptcha" />
+        <item itemvalue="JUnit.TestBeanApi" />
+        <item itemvalue="JUnit.SpringDataRedisTestBean.testString" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="cdf9821a-8b91-4d97-9962-bc993c8e477b" name="更改" comment="" />
+      <created>1731073095125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731073095125</updated>
+      <workItem from="1731073096169" duration="1158000" />
+      <workItem from="1732009484152" duration="62705000" />
+      <workItem from="1732241890015" duration="20965000" />
+      <workItem from="1732337657129" duration="66011000" />
+      <workItem from="1732443390068" duration="5920000" />
+      <workItem from="1732494489080" duration="1186000" />
+      <workItem from="1732497303781" duration="35583000" />
+      <workItem from="1732581049749" duration="43077000" />
+      <workItem from="1732666932754" duration="28522000" />
+      <workItem from="1732711818168" duration="9787000" />
+      <workItem from="1732753036496" duration="24712000" />
+      <workItem from="1732799077532" duration="29491000" />
+      <workItem from="1732881772594" duration="1140000" />
+      <workItem from="1732884676171" duration="202000" />
+      <workItem from="1732885647388" duration="406000" />
+      <workItem from="1732949179483" duration="52956000" />
+      <workItem from="1733098595063" duration="122000" />
+      <workItem from="1733098728446" duration="13297000" />
+      <workItem from="1733139212696" duration="2470000" />
+      <workItem from="1733184992735" duration="5401000" />
+      <workItem from="1733224490223" duration="4104000" />
+      <workItem from="1733236840706" duration="271000" />
+      <workItem from="1733237125663" duration="355000" />
+      <workItem from="1733239490200" duration="3000" />
+      <workItem from="1733547733118" duration="12000" />
+      <workItem from="1733550848527" duration="7562000" />
+      <workItem from="1733564626825" duration="2041000" />
+      <workItem from="1733644482068" duration="1759000" />
+      <workItem from="1734243091837" duration="53000" />
+      <workItem from="1734309484377" duration="1260000" />
+      <workItem from="1734316308917" duration="150000" />
+      <workItem from="1734316661646" duration="170000" />
+      <workItem from="1734316850105" duration="666000" />
+      <workItem from="1734317756662" duration="923000" />
+      <workItem from="1734318867421" duration="321000" />
+      <workItem from="1734338588626" duration="5000" />
+      <workItem from="1734354903450" duration="4000" />
+      <workItem from="1734404560718" duration="5180000" />
+      <workItem from="1734507601277" duration="10000" />
+      <workItem from="1734658331111" duration="15000" />
+      <workItem from="1735202914691" duration="732000" />
+      <workItem from="1735458381059" duration="17000" />
+      <workItem from="1735888694042" duration="169000" />
+      <workItem from="1735981325222" duration="15612000" />
+      <workItem from="1736070243176" duration="3104000" />
+      <workItem from="1736081222736" duration="1359000" />
+      <workItem from="1736131515036" duration="5113000" />
+      <workItem from="1736294471895" duration="11125000" />
+      <workItem from="1736307920136" duration="15000" />
+      <workItem from="1736307939594" duration="405000" />
+      <workItem from="1736324275191" duration="12000" />
+      <workItem from="1736324376859" duration="1184000" />
+      <workItem from="1736325616439" duration="2967000" />
+      <workItem from="1736328695146" duration="898000" />
+      <workItem from="1736329596286" duration="7150000" />
+      <workItem from="1736406363842" duration="4607000" />
+      <workItem from="1736411568480" duration="4099000" />
+      <workItem from="1736415682912" duration="23000" />
+      <workItem from="1736415711606" duration="32000" />
+      <workItem from="1736415751321" duration="816000" />
+      <workItem from="1736416736931" duration="137000" />
+      <workItem from="1736483652685" duration="2778000" />
+      <workItem from="1736498886020" duration="1463000" />
+      <workItem from="1736838284557" duration="86000" />
+      <workItem from="1736838406035" duration="2335000" />
+      <workItem from="1736844605662" duration="827000" />
+      <workItem from="1736846393304" duration="33299000" />
+      <workItem from="1737097203285" duration="552000" />
+      <workItem from="1737098034061" duration="3147000" />
+      <workItem from="1737177211932" duration="2187000" />
+      <workItem from="1737179423988" duration="547000" />
+      <workItem from="1737179978222" duration="7781000" />
+      <workItem from="1737187914037" duration="222000" />
+      <workItem from="1737199634926" duration="19000" />
+      <workItem from="1737200349131" duration="22445000" />
+      <workItem from="1737449416346" duration="612000" />
+      <workItem from="1737452434350" duration="31000" />
+      <workItem from="1737616575145" duration="4690000" />
+      <workItem from="1737699616453" duration="7000" />
+      <workItem from="1738736202972" duration="14942000" />
+    </task>
+    <task id="LOCAL-00001">
+      <option name="closed" value="true" />
+      <created>1732697002799</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732697002799</updated>
+    </task>
+    <task id="LOCAL-00002" summary="前后台管理初始代码">
+      <option name="closed" value="true" />
+      <created>1732697291304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732697291304</updated>
+    </task>
+    <task id="LOCAL-00003" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760408076</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760408077</updated>
+    </task>
+    <task id="LOCAL-00004" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760428827</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760428827</updated>
+    </task>
+    <task id="LOCAL-00005" summary="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能">
+      <option name="closed" value="true" />
+      <created>1732760440404</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732760440404</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能">
+      <option name="closed" value="true" />
+      <created>1732884828264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732884828264</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能">
+      <option name="closed" value="true" />
+      <created>1732884850706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732884850706</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式">
+      <option name="closed" value="true" />
+      <created>1733036236455</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733036236455</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式">
+      <option name="closed" value="true" />
+      <created>1733036257987</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733036257987</updated>
+    </task>
+    <task id="LOCAL-00010" summary=".">
+      <option name="closed" value="true" />
+      <created>1734317069629</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734317069629</updated>
+    </task>
+    <task id="LOCAL-00011" summary=".">
+      <option name="closed" value="true" />
+      <created>1734318025426</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734318025426</updated>
+    </task>
+    <task id="LOCAL-00012" summary=".">
+      <option name="closed" value="true" />
+      <created>1734318882530</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734318882530</updated>
+    </task>
+    <task id="LOCAL-00013" summary=".">
+      <option name="closed" value="true" />
+      <created>1738850080738</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738850080738</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.test" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="w" />
+    <MESSAGE value="前后台管理初始代码" />
+    <MESSAGE value="日志记录aop和自动注入公共字段aop和ThreadLocal记录用户id功能" />
+    <MESSAGE value="升级业务" />
+    <MESSAGE value="feat(springboot): 添加 Redis支持并优化配置管理&#10;&#10;- 新增 Redis 配置和模板对象创建&#10;- 重构应用配置文件，支持多环境配置&#10;- 优化部分代码结构，提高可维护性&#10;- 添加文件删除功能" />
+    <MESSAGE value="refactor(springboot): 重构管理员相关接口返回结果&#10;&#10;- 修改了多个控制器和服务实现类中的方法返回类型&#10;- 优化了错误处理和异常抛出的逻辑&#10;- 调整了部分方法的参数和命名&#10;-统一了返回结果的格式" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="jdk.proxy2.$Proxy75" memberName="h" />
+        <PinnedItemInfo parentTag="java.lang.Integer" memberName="value" />
+        <PinnedItemInfo parentTag="org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint$MethodSignatureImpl" memberName="this$0" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
