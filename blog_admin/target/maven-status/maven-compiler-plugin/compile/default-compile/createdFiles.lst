@@ -1,8 +1,0 @@
-com\example\web\controller\system\admin\SystemLogController.class
-com\example\BlogApplication.class
-com\example\web\controller\common\FileController.class
-com\example\web\controller\common\LoginController.class
-com\example\web\controller\system\admin\SystemHomeController.class
-com\example\web\controller\common\CaptchaController.class
-com\example\web\controller\system\admin\SystemUserController.class
-com\example\web\controller\system\user\UserSystemFrontController.class
